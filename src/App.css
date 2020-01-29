@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,35 @@
   to {
     transform: rotate(360deg);
   }
+} */
+.Name {
+  color: white;
+  font-size: 40px;
+  margin-left: 15%;
+  margin-top:5%;
+}
+
+.Major {
+  color: #dddddd;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-top:1%;
+}
+
+.GPA {
+  color: #dddddd;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-top:1%;
+}
+
+.LinkedIn {
+  /* color: #dddddd; */
+  background-color: #d473d4;
+  font-size: 20px;
+  margin-left: 15%;
+  margin-top:1%;
+  padding:1%;
+  float: left;
+  border-radius: 15%;
 }
