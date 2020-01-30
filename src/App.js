@@ -9,11 +9,11 @@ class App extends Component {
 
   render() {
     return (
-    <div>
-      <div >
+    <div className="App">
+      <div className="App-header">
           Brendan  Michael Muldowney
       </div>
-      <div className="Test">
+      <div >
       testing
       </div>
     </div>
