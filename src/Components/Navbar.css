@@ -1,0 +1,10 @@
+.my_Label{
+  color:green;
+  font-size: calc(20px + 2vmin);
+}
+
+.navbar_Spacing{
+  padding-right: 5%;
+  float:left;
+  color: white;
+}
