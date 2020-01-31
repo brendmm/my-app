@@ -1,6 +1,3 @@
-.App {
-  /* text-align: center; */
-}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -64,4 +61,30 @@
 
 .custom_header{
   background-color: red;
+}
+
+.img-responsive {
+      display: block;
+      max-width: 100%;
+      height: auto;
+   }
+
+.bg-img {
+    background-image: url(Images/background.jpg);
+     background-position: center center;
+     background-repeat:  no-repeat;
+     background-attachment: fixed;
+     background-size:  cover;
+     background-color: #999;
+     min-height: 100vh;
+     color:white;
+     max-width: 100%;
+}
+
+.pinNavbar{
+  margin-bottom: 5%;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  border-bottom: 5%;
 }

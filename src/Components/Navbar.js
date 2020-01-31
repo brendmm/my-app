@@ -12,7 +12,11 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      isActive: false
+      isActive: false,
+      about: "white",
+      resume: "white",
+      projects: "white",
+      contact: "white"
     };
   }
 
@@ -21,14 +25,44 @@ class Navbar extends Component {
     console.log(this.state.isActive)
   };
 
-  submitData = () => {
-    console.log(this.state.isActive)
+  submitData = (item) => {
+    if(item === "about"){
+      this.setState({ isActive: false,
+                      about: "#d3d3d3",
+                      resume: "white",
+                      projects: "white",
+                      contact: "white"})
+
+    }
+    else if(item === "resume"){
+      this.setState({ isActive: false,
+                      about: "white",
+                      resume: "#d3d3d3",
+                      projects: "white",
+                      contact: "white"})
+    }
+    else if(item === "projects"){
+      this.setState({ isActive: false,
+                      about: "white",
+                      resume: "white",
+                      projects: "#d3d3d3",
+                      contact: "white"})
+    }
+    else if(item === "contact"){
+      this.setState({ isActive: false,
+                      about: "white",
+                      resume: "white",
+                      projects: "white",
+                      contact: "#d3d3d3"})
+    }
+
+    console.log(item)
   };
 
   render() {
     return (
     <div>
-    <nav className="navbar" role="navigation" aria-label="main navigation">
+    <nav className="navbar is-fixed-top" role="navigation" aria-label="main navigation">
       <div className="navbar-brand">
         <div className="navbar-item">
           <div className="my_Label">
@@ -46,33 +80,35 @@ class Navbar extends Component {
 
       <div id="navbarBasicExample" className={"navbar-menu" + (this.state.isActive ? "is-active" : "") }>
         <div className="navbar-start">
-            <a className="navbar-item" onClick={() => this.submitData()}>
-              <Link to="/about">
+          <Link to="/about" onClick={() => this.submitData("about")} style={{backgroundColor:this.state.about}}>
+            <div className="navbar-item"  style={{backgroundColor:this.state.about}}>
                 About
-              </Link>
-            </a>
-          <a className="navbar-item">
-            <Link to="/resume">
-              Resume
-            </Link>
-          </a>
-          <a className="navbar-item">
-            <Link to="/projects">
-              Projects
-            </Link>
-          </a>
-          <a className="navbar-item">
-            Contact
-          </a>
+            </div>
+          </Link>
+          <Link to="/resume" onClick={() => this.submitData("resume")} style={{backgroundColor:this.state.resume}}>
+            <div className="navbar-item" style={{backgroundColor:this.state.resume}}>
+                Resume
+            </div>
+          </Link>
+          <Link to="/projects" onClick={() => this.submitData("projects")} style={{backgroundColor:this.state.projects}}>
+            <div className="navbar-item" style={{backgroundColor:this.state.projects}}>
+                Projects
+            </div>
+          </Link>
+          <Link to="/contact" onClick={() => this.submitData("contact")} style={{backgroundColor:this.state.contact}}>
+            <div className="navbar-item" style={{backgroundColor:this.state.contact}}>
+                Contact
+            </div>
+          </Link>
         </div>
 
         <div className="navbar-end">
           <div className="navbar-item">
             <div className="buttons">
-              <a className="button is-link is-outlined">
+              <a className="button is-link is-outlined" href="https://github.com/brendmm" target="_blank">
                 <img src={Github} width="30" height="30"/>
               </a>
-              <a className="button is-link is-outlined">
+              <a className="button is-link is-outlined" href="https://www.linkedin.com/in/brendan-muldowney-892895132/" target="_blank">
                 <img src={LinkedIn} width="30" height="30"/>
               </a>
             </div>
