@@ -22,7 +22,7 @@ class Home extends Component {
         <Navbar/>
         </div>
         <Switch>
-          <Route path="/about">
+          <Route path={process.env.PUBLIC_URL + '/about'}>
           <div className="bg-img">
             about
             </div>

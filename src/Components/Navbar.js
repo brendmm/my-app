@@ -72,9 +72,9 @@ class Navbar extends Component {
         <a onClick={() => this.responsiveNavbar()} role="button"
            className={"navbar-burger burger" + (this.state.isActive ? "is-active" : "") }
            aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
-          <span aria-hidden="true" style={{backgroundColor:"white"}}></span>
-          <span aria-hidden="true" style={{backgroundColor:"white"}}></span>
-          <span aria-hidden="true" style={{backgroundColor:"white"}}></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
         </a>
       </div>
 
