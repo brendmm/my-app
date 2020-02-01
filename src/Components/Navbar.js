@@ -13,7 +13,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       isActive: false,
-      about: "#d3d3d3",
+      about: "transparent",
       resume: "transparent",
       projects: "transparent",
       contact: "transparent"
@@ -80,7 +80,7 @@ class Navbar extends Component {
 
       <div id="navbarBasicExample" style={{backgroundColor:"white"}} className={"navbar-menu" + (this.state.isActive ? "is-active" : "") }>
         <div className="navbar-start">
-          <Link to="/about" onClick={() => this.submitData("about")} style={{backgroundColor:this.state.about}}>
+          <Link to="/" onClick={() => this.submitData("about")} style={{backgroundColor:this.state.about}}>
             <div className="navbar-item"  style={{color: "black", backgroundColor:this.state.about}}>
                 About
             </div>
