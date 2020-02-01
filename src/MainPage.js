@@ -15,7 +15,7 @@ class Home extends Component {
     this.state = {};
   }
   componentDidMount = () =>{
-    // history.push('/about')
+    history.push('/#/about')
   }
 
   render() {
@@ -31,7 +31,7 @@ class Home extends Component {
           <Route path={process.env.PUBLIC_URL + '/about'}>
           <div className="bg-img">
 
-            about
+            about.................................................................................................................................................................................................
             </div>
           </Route>
           <Route path="/resume">
