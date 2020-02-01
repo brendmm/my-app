@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/my-app/static/css/main.44172dad.chunk.css",
-    "main.js": "/my-app/static/js/main.3ff17df1.chunk.js",
+    "main.js": "/my-app/static/js/main.205fe681.chunk.js",
     "runtime-main.js": "/my-app/static/js/runtime-main.56c001b7.js",
     "static/css/2.f90c871e.chunk.css": "/my-app/static/css/2.f90c871e.chunk.css",
-    "static/js/2.c1e6e6cf.chunk.js": "/my-app/static/js/2.c1e6e6cf.chunk.js",
+    "static/js/2.4a057960.chunk.js": "/my-app/static/js/2.4a057960.chunk.js",
     "index.html": "/my-app/index.html",
-    "precache-manifest.40431e45a78278eae83ff90506ff464f.js": "/my-app/precache-manifest.40431e45a78278eae83ff90506ff464f.js",
+    "precache-manifest.f7bf2e899eb01ea448d42169bcc20869.js": "/my-app/precache-manifest.f7bf2e899eb01ea448d42169bcc20869.js",
     "service-worker.js": "/my-app/service-worker.js",
-    "static/js/2.c1e6e6cf.chunk.js.LICENSE": "/my-app/static/js/2.c1e6e6cf.chunk.js.LICENSE",
+    "static/js/2.4a057960.chunk.js.LICENSE": "/my-app/static/js/2.4a057960.chunk.js.LICENSE",
     "static/media/Profile.JPG": "/my-app/static/media/Profile.d6911ae7.JPG",
     "static/media/Resume.pdf": "/my-app/static/media/Resume.7d69cd2c.pdf",
     "static/media/MainPage.css": "/my-app/static/media/background.28a29e3a.jpg",
@@ -19,8 +19,8 @@
   "entrypoints": [
     "static/js/runtime-main.56c001b7.js",
     "static/css/2.f90c871e.chunk.css",
-    "static/js/2.c1e6e6cf.chunk.js",
+    "static/js/2.4a057960.chunk.js",
     "static/css/main.44172dad.chunk.css",
-    "static/js/main.3ff17df1.chunk.js"
+    "static/js/main.205fe681.chunk.js"
   ]
 }
