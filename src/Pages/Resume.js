@@ -39,9 +39,15 @@ class Resume extends Component {
 }
 
 class PdfComponent extends Component {
+  onResumeClick() {
+    window.open(pdf);
+  }
   render() {
     return (
       <div>
+      <div class="column is-half is-offset-one-quarter">
+      <button class="button is-link" onClick={this.onResumeClick} style={{width:"100%"}}>Open Resume</button>
+      </div>
         <Document
           file={pdf}
         >

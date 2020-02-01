@@ -13,7 +13,7 @@ class Navbar extends Component {
     super(props);
     this.state = {
       isActive: false,
-      about: "transparent",
+      about: "#d3d3d3",
       resume: "transparent",
       projects: "transparent",
       contact: "transparent"
