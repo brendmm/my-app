@@ -5,6 +5,7 @@ import Navbar from './Components/Navbar';
 import { Router, Route, Link, Switch } from 'react-router'
 import About from "./Pages/About";
 import Resume from "./Pages/Resume";
+import Contact from "./Pages/Contact";
 import Background from './Images/background.png'
 
 
@@ -34,7 +35,7 @@ class Home extends Component {
             projects
           </Route>
           <Route path="/contact">
-            contact
+            <Contact/>
           </Route>
         </Switch>
         </div>

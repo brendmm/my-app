@@ -61,7 +61,7 @@ class Navbar extends Component {
 
   render() {
     return (
-    <div>
+    <div >
     <nav className="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
       <div className="navbar-brand" style={{backgroundColor:"white"}}>
         <div className="navbar-item">
