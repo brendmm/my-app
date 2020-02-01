@@ -8,3 +8,12 @@
   float:left;
   color: white;
 }
+
+.navbar {
+/* background: radial-gradient(circle, #b660cd 0%, rgba(7,31,9,1) 100%); */
+background-color: #d3d3d3;
+padding-bottom: 1%;
+}
+.outerLayer{
+
+}

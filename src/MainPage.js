@@ -17,7 +17,8 @@ class Home extends Component {
   render() {
     return (
         <div className="App-header">
-        <div className="pinNavbara">
+        <div className="bg-img">
+        <div className="pinNavbar">
         <Navbar/>
         </div>
         <Switch>
@@ -27,13 +28,7 @@ class Home extends Component {
             </div>
           </Route>
           <Route path="/resume">
-            Resume
-            <div>
-            test
-            </div>
-            <div>
-            test
-            </div>
+            <Resume/>
           </Route>
           <Route path="/projects">
             projects
@@ -42,6 +37,7 @@ class Home extends Component {
             contact
           </Route>
         </Switch>
+        </div>
         </div>
     );
   }
