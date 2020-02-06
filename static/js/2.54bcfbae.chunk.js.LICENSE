@@ -27,6 +27,27 @@ object-assign
 */
 
 /*!
+    Copyright (c) 2017 Jed Watson.
+    Licensed under the MIT License (MIT), see
+    http://jedwatson.github.io/classnames
+    */
+
+/** @license React v16.12.0
+    * react-is.production.min.js
+    *
+    * Copyright (c) Facebook, Inc. and its affiliates.
+    *
+    * This source code is licensed under the MIT license found in the
+    * LICENSE file in the root directory of this source tree.
+    */
+
+/*
+    object-assign
+    (c) Sindre Sorhus
+    @license MIT
+    */
+
+/*!
  * The buffer module from node.js, for the browser.
  *
  * @author   Feross Aboukhadijeh <http://feross.org>
@@ -60,6 +81,8 @@ object-assign
  * LICENSE file in the root directory of this source tree.
  */
 
+/*! https://mths.be/punycode v1.4.1 by @mathias */
+
 /** @license React v16.12.0
  * react-is.production.min.js
  *
@@ -68,5 +91,3 @@ object-assign
  * This source code is licensed under the MIT license found in the
  * LICENSE file in the root directory of this source tree.
  */
-
-/*! https://mths.be/punycode v1.4.1 by @mathias */

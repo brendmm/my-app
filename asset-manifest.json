@@ -1,26 +1,30 @@
 {
   "files": {
-    "main.css": "/my-app/static/css/main.44172dad.chunk.css",
-    "main.js": "/my-app/static/js/main.b67ffe56.chunk.js",
+    "main.css": "/my-app/static/css/main.3e763b8f.chunk.css",
+    "main.js": "/my-app/static/js/main.4b19da77.chunk.js",
     "runtime-main.js": "/my-app/static/js/runtime-main.56c001b7.js",
     "static/css/2.f90c871e.chunk.css": "/my-app/static/css/2.f90c871e.chunk.css",
-    "static/js/2.4a057960.chunk.js": "/my-app/static/js/2.4a057960.chunk.js",
+    "static/js/2.54bcfbae.chunk.js": "/my-app/static/js/2.54bcfbae.chunk.js",
     "index.html": "/my-app/index.html",
-    "precache-manifest.b89b37772d0ee9311fc9656776099a92.js": "/my-app/precache-manifest.b89b37772d0ee9311fc9656776099a92.js",
+    "precache-manifest.9b721429b6525a1cdd7710541cdbf34e.js": "/my-app/precache-manifest.9b721429b6525a1cdd7710541cdbf34e.js",
     "service-worker.js": "/my-app/service-worker.js",
-    "static/js/2.4a057960.chunk.js.LICENSE": "/my-app/static/js/2.4a057960.chunk.js.LICENSE",
-    "static/media/Profile.JPG": "/my-app/static/media/Profile.d6911ae7.JPG",
+    "static/js/2.54bcfbae.chunk.js.LICENSE": "/my-app/static/js/2.54bcfbae.chunk.js.LICENSE",
+    "static/media/Headshot.png": "/my-app/static/media/Headshot.0d7c50c2.png",
+    "static/media/Headshot.jpeg": "/my-app/static/media/Headshot.cff53aba.jpeg",
     "static/media/Resume.pdf": "/my-app/static/media/Resume.7d69cd2c.pdf",
     "static/media/MainPage.css": "/my-app/static/media/background.28a29e3a.jpg",
     "static/media/background.png": "/my-app/static/media/background.b0814691.png",
+    "static/media/c++_logo.png": "/my-app/static/media/c++_logo.196cd9e1.png",
     "static/media/email.png": "/my-app/static/media/email.7c5e1a45.png",
-    "static/media/github_logo.png": "/my-app/static/media/github_logo.a9ee2a5b.png"
+    "static/media/github_logo.png": "/my-app/static/media/github_logo.a9ee2a5b.png",
+    "static/media/python_logo.png": "/my-app/static/media/python_logo.067050f6.png",
+    "static/media/react_logo.png": "/my-app/static/media/react_logo.6c2376b1.png"
   },
   "entrypoints": [
     "static/js/runtime-main.56c001b7.js",
     "static/css/2.f90c871e.chunk.css",
-    "static/js/2.4a057960.chunk.js",
-    "static/css/main.44172dad.chunk.css",
-    "static/js/main.b67ffe56.chunk.js"
+    "static/js/2.54bcfbae.chunk.js",
+    "static/css/main.3e763b8f.chunk.css",
+    "static/js/main.4b19da77.chunk.js"
   ]
 }
