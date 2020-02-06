@@ -1,1 +1,11 @@
-
+.stripes{
+  background: repeating-linear-gradient(
+  45deg,
+  #F7F8FC,
+  #F7F8FC 33%,
+  #DFE0E4 33%,
+  #DFE0E4 66%,
+  #C7C8CC 66%,
+  #C7C8CC 100%
+);
+}

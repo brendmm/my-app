@@ -28,7 +28,7 @@ class Navbar extends Component {
   submitData = (item) => {
     if(item === "about"){
       this.setState({ isActive: false,
-                      about: "#02012B",
+                      about: "transparent",
                       resume: "transparent",
                       projects: "transparent",
                       contact: "transparent"})
@@ -37,7 +37,7 @@ class Navbar extends Component {
     else if(item === "resume"){
       this.setState({ isActive: false,
                       about: "transparent",
-                      resume: "#02012B",
+                      resume: "transparent",
                       projects: "transparent",
                       contact: "transparent"})
     }
@@ -45,7 +45,7 @@ class Navbar extends Component {
       this.setState({ isActive: false,
                       about: "transparent",
                       resume: "transparent",
-                      projects: "#02012B",
+                      projects: "transparent",
                       contact: "transparent"})
     }
     else if(item === "contact"){
@@ -53,7 +53,7 @@ class Navbar extends Component {
                       about: "transparent",
                       resume: "transparent",
                       projects: "transparent",
-                      contact: "#02012B"})
+                      contact: "transparent"})
     }
 
     console.log(item)
@@ -61,7 +61,7 @@ class Navbar extends Component {
 
   render() {
     return (
-    <div className="background">
+    <div style={{maxWidth:"100vw"}}>
     <nav className="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
 
       <div className="navbar-brand">

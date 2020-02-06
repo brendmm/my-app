@@ -39,7 +39,7 @@ fixSpace = () => {
 }
   render() {
     return (
-      <div style={{backgroundColor:"transparent",minHeight:"100vh",minWidth:"100vh",paddingTop:this.state.space,paddingLeft:"10%",paddingRight:"10%"}}>
+      <div className = "stripes" style={{backgroundColor:"#F7F8FC",minHeight:"100vh",minWidth:"100vh",paddingTop:this.state.space,paddingLeft:"10%",paddingRight:"10%"}}>
         {console.log(this.props)}
         {this.fixSpace()}
 

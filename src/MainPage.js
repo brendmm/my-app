@@ -48,10 +48,10 @@ class Home extends Component {
       // <HashRouter basename='/'>
       <div>
         <div className="App-header">
-        <div  style={{backgroundColor:"#F7F8FC"}}>
+        <div >
 
           <div className="pinNavbar">
-          <Navbar/>
+          <Navbar style={{maxWidth: "50vw"}}/>
           </div>
         </div>
 
@@ -64,9 +64,7 @@ class Home extends Component {
         <Element name="Project" className="element" style={{backgroundColor:"#F7F8FC"}}>
             <Project space={this.state.collapsed}/>
         </Element>
-        <Element name="space" className="element" className="bg-img">
 
-        </Element>
         <Element name="Contact" className="element" style={{backgroundColor:"#F7F8FC"}}>
           <Contact space={this.state.collapsed}/>
         </Element>
