@@ -8,8 +8,7 @@ import Resume from "./Pages/Resume";
 import Project from "./Pages/Project";
 import Contact from "./Pages/Contact";
 
-import Background from './Images/background.png'
-import { Element, animateScroll as scroll } from "react-scroll";
+import { Element } from "react-scroll";
 
 class Home extends Component {
   constructor(props) {
@@ -45,33 +44,21 @@ class Home extends Component {
 
   render() {
     return (
-      // <HashRouter basename='/'>
-      <div>
         <div className="App-header">
-        <div >
-
-          <div className="pinNavbar">
-          <Navbar style={{maxWidth: "50vw"}}/>
-          </div>
+          <Navbar/>
+          <Element name="About" className="element">
+              <About space={this.state.collapsed} />
+          </Element>
+          <Element name="Resume" className="element">
+            <Resume space={this.state.collapsed}/>
+          </Element>
+          <Element name="Project" className="element">
+              <Project space={this.state.collapsed}/>
+          </Element>
+          <Element name="Contact" className="element">
+            <Contact space={this.state.collapsed}/>
+          </Element>
         </div>
-
-        <Element name="About" className="element"  style={{backgroundColor:"#F7F8FC"}}>
-            <About space={this.state.collapsed} />
-        </Element>
-        <Element name="Resume" className="element" style={{backgroundColor:"#F7F8FC"}}>
-          <Resume space={this.state.collapsed}/>
-        </Element>
-        <Element name="Project" className="element" style={{backgroundColor:"#F7F8FC"}}>
-            <Project space={this.state.collapsed}/>
-        </Element>
-
-        <Element name="Contact" className="element" style={{backgroundColor:"#F7F8FC"}}>
-          <Contact space={this.state.collapsed}/>
-        </Element>
-        </div>
-        </div>
-
-        // </HashRouter>
     );
   }
 }

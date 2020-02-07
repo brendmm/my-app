@@ -32,7 +32,7 @@ class Resume extends Component {
   render() {
     return (
 
-    <div style={{backgroundColor:"transparent",minHeight:"100vh",paddingTop:this.state.space}}>
+    <div style={{backgroundColor:"#DFE0E4",minHeight:"100vh",paddingTop:this.state.space}}>
       {console.log(this.props)}
       {this.fixSpace()}
       <div className="card column is-6 is-offset-3" style={{backgroundColor:"transparent",bordear:"5px black solid",borderRadius:"25px",marginTop:"15%",boxShadow: "0px 0px 0px"}}>

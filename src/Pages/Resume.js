@@ -74,9 +74,10 @@ class Resume extends Component {
             <div className="button is-link" onClick={this.viewResume} style={{width:"70%", minHeight:"40%",marginLeft:"15%",marginRight:"15%"}}>Open PDF Below</div>
           </div>
           </div>
-          <div id="row" style={{ width: "100vw", display: "flex", overflow: "hidden"}}>
-            <div id="placeholderWrapper" style={{width: "10vw"}}/>
-            <div id="pdfWrapper" style={{width: "80vw", marginTop:"1%"}} ref={(ref) => this.pdfWrapper = ref}>
+          <div id="row" style={{ maxWidth: "100vw", display: "flex", overflow: "hidden"}}>
+          <div id="placeholderWrapper" style={{minWidth: "7vw"}}/>
+
+            <div id="pdfWrapper" style={{minWidth: "80vw", marginTop:"1%"}} ref={(ref) => this.pdfWrapper = ref}>
             {this.displayResume()}
             </div>
           </div>

@@ -1,11 +1,7 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
 import '../MainPage.css';
-// import { Route } from "react-router";
-import headshot from '../Images/Headshot.jpeg'
-// import family from '../Images/Family.JPG'
 
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import Image from 'react-image-resizer';
 
 class About extends Component {

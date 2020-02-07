@@ -3,26 +3,24 @@ import "bulma/css/bulma.css";
 import './About.css';
 // import { Route } from "react-router";
 import headshot from '../Images/Headshot.png'
-import cpp from '../Images/c++_logo.png'
-import python from '../Images/python_logo.png'
-import react from '../Images/react_logo.png'
+// import cpp from '../Images/c++_logo.png'
+// import python from '../Images/python_logo.png'
+// import react from '../Images/react_logo.png'
 
-// import family from '../Images/Family.JPG'
-import Skill from '../Components/Skill.js'
+// import Skill from '../Components/Skill.js'
 
-import Carousel, { Dots } from '@brainhubeu/react-carousel';
 import Image from 'react-image-resizer';
 
 class About extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      space: "0%",
-      spaceState: 0
+      space: "0%",      //changing top padding depending on screen width
+      spaceState: 0     //track if width changes so there is no recursive rerendering
     };
   }
 
-
+//Determine padding to set
 fixSpace = () => {
   if(this.props.space!=this.state.spaceState){
     if(this.props.space === 1){
@@ -37,9 +35,10 @@ fixSpace = () => {
     console.log(this.state.space)
   }
 }
+
   render() {
     return (
-      <div className = "stripes" style={{backgroundColor:"#F7F8FC",minHeight:"100vh",minWidth:"100vh",paddingTop:this.state.space,paddingLeft:"10%",paddingRight:"10%"}}>
+      <div className = "stripes" style={{minHeight:"100vh",maxWidth:"100vw",paddingTop:this.state.space,paddingLeft:"10%",paddingRight:"10%"}}>
         {console.log(this.props)}
         {this.fixSpace()}
 
