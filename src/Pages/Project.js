@@ -65,7 +65,7 @@ class Resume extends Component {
   }
 Botler=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
+    <div className="card" style={{width:this.determineWidth(), height:"95vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
     <header class="card-header" style={{backgroundColor:"#3f4044"}}>
        <p class="card-header-title" style={{color:"#F7F8FC"}}>
          Botler
@@ -93,7 +93,7 @@ Botler=()=>{
 }
 Game=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
+    <div className="card" style={{width:this.determineWidth(), height:"95vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
     <header class="card-header" style={{backgroundColor:"#3f4044"}}>
        <p class="card-header-title" style={{color:"#F7F8FC"}}>
          Tic Tac Toe AI
@@ -123,7 +123,7 @@ Game=()=>{
 }
 Pacman=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
+    <div className="card" style={{width:this.determineWidth(), height:"95vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
     <header class="card-header" style={{backgroundColor:"#3f4044"}}>
        <p class="card-header-title" style={{color:"#F7F8FC"}}>
          Berkley PacMan and MNIST Data
