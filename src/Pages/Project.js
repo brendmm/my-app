@@ -65,7 +65,7 @@ class Resume extends Component {
   }
 Botler=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"95vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
+    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
     <header class="card-header" style={{backgroundColor:"#3f4044"}}>
        <p class="card-header-title" style={{color:"#F7F8FC"}}>
          Botler
@@ -93,7 +93,7 @@ Botler=()=>{
 }
 Game=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"95vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
+    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
     <header class="card-header" style={{backgroundColor:"#3f4044"}}>
        <p class="card-header-title" style={{color:"#F7F8FC"}}>
          Tic Tac Toe AI
@@ -123,7 +123,7 @@ Game=()=>{
 }
 Pacman=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"95vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
+    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
     <header class="card-header" style={{backgroundColor:"#3f4044"}}>
        <p class="card-header-title" style={{color:"#F7F8FC"}}>
          Berkley PacMan and MNIST Data
@@ -131,17 +131,17 @@ Pacman=()=>{
      </header>
      <div class="card-content">
         <div class="content" style={{textAlign:"left"}}>
-              These project involved using  artificial intelligence
-              and machine learning. The Berkley project used artificial
-              intelligence arlgorithms to beat Pacman. The MNIST Data project
-              involved creating and comparing different types of neural networks
-              to categorize the MNIST dataset.
-            <br/><br/>
-            Topics:
+              Berkley AI:
             <ul style={{marginLeft:"5%", fontSize:"15px"}}>
-              <li>Artificial Intelligence</li>
-              <li>Machine Learning</li>
-              <li>Algorithms</li>
+              <li>Created solutions to Pac Man using artificial intelligence</li>
+              <li>PRactice different algorithms and designs to receive increasingly better results</li>
+            </ul>
+        </div>
+        <div class="content" style={{textAlign:"left"}}>
+              MNIST Data:
+            <ul style={{marginLeft:"5%", fontSize:"15px"}}>
+              <li>Used Nueral Networks to categorize handwritten numbers</li>
+              <li>Compared different network designs and compared resules</li>
             </ul>
             <br/>
         </div>
@@ -155,7 +155,8 @@ Pacman=()=>{
 
     <div style={{textAlign:"center",backgroundColor:"#DFE0E4",minHeight:"100vh",paddingTop:this.state.space}}>
       {console.log(this.props)}
-      {this.fixSpace()}
+      {this.fixSpace}
+
       <Carousel
       arrows
       infinite

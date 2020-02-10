@@ -63,7 +63,7 @@ descibeSoftware = () => {
       <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
             Software development is my passion.
              I have had amazing opporunities to
-             gin experience is different avenues
+             gain experience is different avenues
              of programming from front end webdesign
              to machine learning and embedded software.
             </div> : null}
@@ -85,7 +85,7 @@ descibeVirginia = () => {
           <li>Embedded Software Design</li>
           <li>Artificial Intelligence</li>
           <li>Machine Learning</li>
-          <li>Into to Control Systems</li>
+          <li>Intro to Control Systems</li>
           <li>Network Applications and Design</li>
           </div>
         </div> : null }
@@ -130,21 +130,21 @@ descibeBoston = () => {
             </div>
             </div>
             <div className="column  is-one-third" style={{textAlign:"left"}}>
-              <div className="subtitle is-3 is-center" onClick={this.showSoftware} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%", display:"inline-block",minWidth:"100%",paddingBottom:"2%"}}>
+              <div className="subtitle is-3 is-center" onClick={this.showSoftware} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%", display:"inline-block",minWidth:"100%",paddingBottom:"2%", border:"2px solid black"}}>
                 <img className="is-rounded"src={software} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
                 <div style={{marginLeft:"10%"}}>
                   Software <br/> Developer
                 </div>
               </div>
               {this.descibeSoftware()}
-              <div className="subtitle is-3 is-center" onClick={this.showVirginia} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%",display:"inline-block",minWidth:"100%", marginTop:"2%"}}>
+              <div className="subtitle is-3 is-center" onClick={this.showVirginia} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%",display:"inline-block",minWidth:"100%", marginTop:"2%", border:"2px solid black"}}>
                 <img className="is-rounded"src={graduate} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
                 <div style={{paddingLeft:"10%", marginTop:"0%"}}>
                   Virginia Tech <br/> Alumnus
                 </div>
               </div>
               {this.descibeVirginia()}
-              <div className="subtitle is-3 is-center" onClick={this.showBoston} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%", paddingBottom:"2%",display:"inline-block",minWidth:"100%"}}>
+              <div className="subtitle is-3 is-center" onClick={this.showBoston} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%", paddingBottom:"2%",display:"inline-block",minWidth:"100%", border:"2px solid black"}}>
                 <img className="is-rounded"src={location} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
                 <div style={{marginLeft:"5%", marginTop:"5%"}}>
                   Boston, MA
