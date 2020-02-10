@@ -3,6 +3,12 @@ import "bulma/css/bulma.css";
 import './About.css';
 // import { Route } from "react-router";
 import headshot from '../Images/Headshot.png'
+import software from '../Images/software.png'
+import graduate from '../Images/graduate.png'
+import location from '../Images/location.png'
+
+import {SlideDown} from 'react-slidedown'
+import 'react-slidedown/lib/slidedown.css'
 // import cpp from '../Images/c++_logo.png'
 // import python from '../Images/python_logo.png'
 // import react from '../Images/react_logo.png'
@@ -16,7 +22,10 @@ class About extends Component {
     super(props);
     this.state = {
       space: "0%",      //changing top padding depending on screen width
-      spaceState: 0     //track if width changes so there is no recursive rerendering
+      spaceState: 0,     //track if width changes so there is no recursive rerendering
+      descibeSW: false,
+      descibeV: false,
+      descibeB: false
     };
   }
 
@@ -36,26 +45,111 @@ fixSpace = () => {
   }
 }
 
+
+showSoftware = () => {
+  this.setState({descibeSW: !this.state.descibeSW})
+}
+showBoston = () => {
+  this.setState({descibeB: !this.state.descibeB})
+}
+showVirginia = () => {
+  this.setState({descibeV: !this.state.descibeV})
+}
+
+descibeSoftware = () => {
+    return(
+      <SlideDown className='my-dropdown-slidedown'>
+      {this.state.descibeSW ?
+      <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
+            Software development is my passion.
+             I have had amazing opporunities to
+             gin experience is different avenues
+             of programming from front end webdesign
+             to machine learning and embedded software.
+            </div> : null}
+
+      </SlideDown>
+
+    )
+}
+descibeVirginia = () => {
+    return(
+      <SlideDown className='my-dropdown-slidedown'>
+      {this.state.descibeV ?
+        <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
+          In May 2020, I will be graduating with a degree in Computer Engineering.
+          The classes I have taken have taught me an incredible amount and
+          prepared me for my future career. Some of my favorite classes were:
+          <div  className="subtitle is-6" style={{paddingTop:"5%",paddingLeft:"5%",textAliagn:"center"}}>
+          <li>Data Structures and Algorithms</li>
+          <li>Embedded Software Design</li>
+          <li>Artificial Intelligence</li>
+          <li>Machine Learning</li>
+          <li>Into to Control Systems</li>
+          <li>Network Applications and Design</li>
+          </div>
+        </div> : null }
+
+      </SlideDown>
+
+    )
+}
+descibeBoston = () => {
+  return(
+    <SlideDown className='my-dropdown-slidedown'>
+    {this.state.descibeB ?
+    <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
+          Software development is my passion.
+           I have had amazing opporunities to
+           gin experience is different avenues
+           of programming from front end webdesign
+           to machine learning and embedded software.
+          </div> : null}
+
+    </SlideDown>
+
+  )
+}
+
   render() {
     return (
-      <div className = "stripes" style={{minHeight:"100vh",maxWidth:"100vw",paddingTop:this.state.space,paddingLeft:"10%",paddingRight:"10%"}}>
+      <div className = "stripes" style={{maxWidth:"100vw",paddingTop:this.state.space,paddingLeft:"5%",paddingRight:"5%"}}>
         {console.log(this.props)}
         {this.fixSpace()}
 
-        <div className="title is-2 is-center">
+        <div className="title is-1 is-center" style={{  fontSize: "calc(50px + 2vmin)"}}>
           <div className="columns">
-          <div className="column is-one-third">
+          <div className="column is-one-third" style={{textAlign:"center"}}>
+          About Me
           </div>
-          <div className="column" style={{paddingTop:"10%"}}>
-          <div>
-            <Image
-              style={{rotaione:"90"}}
-              src={headshot}
-              height={ 300 }
-            />
+          <div className="column" style={{textAlign:"center"}}>
+          <div style={{display: "inline-block"}}>
+          <img className="is-rounded"src={headshot} width="100%" alt="Placeholder image" style={{float:"left", paddingTop:"4%"}}/>
+
             </div>
             </div>
-            <div className="column  is-one-third">
+            <div className="column  is-one-third" style={{textAlign:"left"}}>
+              <div className="subtitle is-3 is-center" onClick={this.showSoftware} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%", display:"inline-block",minWidth:"100%",paddingBottom:"2%"}}>
+                <img className="is-rounded"src={software} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
+                <div style={{marginLeft:"10%"}}>
+                  Software <br/> Developer
+                </div>
+              </div>
+              {this.descibeSoftware()}
+              <div className="subtitle is-3 is-center" onClick={this.showVirginia} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%",display:"inline-block",minWidth:"100%", marginTop:"2%"}}>
+                <img className="is-rounded"src={graduate} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
+                <div style={{paddingLeft:"10%", marginTop:"0%"}}>
+                  Virginia Tech <br/> Alumnus
+                </div>
+              </div>
+              {this.descibeVirginia()}
+              <div className="subtitle is-3 is-center" onClick={this.showBoston} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%", paddingBottom:"2%",display:"inline-block",minWidth:"100%"}}>
+                <img className="is-rounded"src={location} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
+                <div style={{marginLeft:"5%", marginTop:"5%"}}>
+                  Boston, MA
+                </div>
+              </div>
+              {this.descibeBoston()}
             </div>
             </div>
 
@@ -67,51 +161,3 @@ fixSpace = () => {
 }
 
 export default About;
-
-// <div style={{width:"50%"}}>
-//       <Carousel
-//       centered
-// // infinite
-// arrows
-// slidesPerPage={1}
-//       >
-//         <Image
-//           style={{rotaione:"90"}}
-//           src={family}
-//           height={ 240 }
-//         />
-//         <Image
-//           style={{rotaione:"90"}}
-//           src={imageOne}
-//           height={ 240 }
-//         />
-//       </Carousel>
-// </div>
-
-// <div className="column is-three-quarters">
-//   <div className="title is-5">
-//
-//     I'm a software developer. In fact, I have created this
-//     website using ReactJs!
-//     <br/>
-//     <br/>
-//     In May of 2020, I will graduate with a B.S. in
-//     Computer Engineering from Virginia Tech. Here,
-//     I have had amazing opportunities to enhance my
-//     software developing skills. I have become proficient
-//     in numerpus languages such as C++, Python, and C, as
-//     well as techniques in artificial intelligence and machine
-//     learning. During my time in school, I have taken courses
-//     in data structures, applied software design, control systems,
-//     and embedded software design.
-//     <br/>
-//     <br/>
-//     Outside of school, I have been able to gain professional
-//     experience through internships. I spent the summers of 2018
-//     and 2019 interning for Optum. Here I was able to be involved
-//     in an agile working environment creating innovative projects.
-//     <br/>
-//     <br/>
-//
-//   </div>
-// </div>

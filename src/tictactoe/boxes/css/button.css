@@ -1,0 +1,166 @@
+  .section{
+    float: center;
+  }
+  .tlsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px black solid;
+    border-bottom: 5px black solid;
+    border-left: 5px white solid;
+    border-top: 5px white solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 15px 0px 0px 0px;
+  }
+
+  .tcsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px black solid;
+    border-bottom: 5px black solid;
+    border-left: 5px black solid;
+    border-top: 5px white solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 0px 0px 0px;
+  }
+  .trsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px white solid;
+    border-bottom: 5px black solid;
+    border-left: 5px black solid;
+    border-top: 5px white solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 15px 0px 0px;
+  }
+  .clsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px black solid;
+    border-bottom: 5px black solid;
+    border-left: 5px white solid;
+    border-top: 5px black solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 0px 0px 0px;
+  }
+  .ccsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px black solid;
+    border-bottom: 5px black solid;
+    border-left: 5px black solid;
+    border-top: 5px black solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 0px 0px 0px;
+  }
+  .crsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px white solid;
+    border-bottom: 5px black solid;
+    border-left: 5px black solid;
+    border-top: 5px black solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 0px 0px 0px;
+  }
+  .blsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px black solid;
+    border-bottom: 5px white solid;
+    border-left: 5px white solid;
+    border-top: 5px black solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 0px 0px 15px;
+  }
+  .bcsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px black solid;
+    border-bottom: 5px white solid;
+    border-left: 5px black solid;
+    border-top: 5px black solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 0px 0px 0px;
+  }
+  .brsection {
+    float:left;
+    width: 33%;
+    height: 100px;
+    border-right: 5px white solid;
+    border-bottom: 5px white solid;
+    border-left: 5px black solid;
+    border-top: 5px black solid;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 30px;
+    padding-top: 10%;
+    /* padding-bottom: 5%; */
+    border-radius: 0px 0px 15px 0px;
+    }

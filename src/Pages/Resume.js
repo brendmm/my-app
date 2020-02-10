@@ -75,7 +75,7 @@ class Resume extends Component {
           </div>
           </div>
           <div id="row" style={{ maxWidth: "100vw", display: "flex", overflow: "hidden"}}>
-          <div id="placeholderWrapper" style={{minWidth: "7vw"}}/>
+          <div id="placeholderWrapper" style={{minWidth: "5vw"}}/>
 
             <div id="pdfWrapper" style={{minWidth: "80vw", marginTop:"1%"}} ref={(ref) => this.pdfWrapper = ref}>
             {this.displayResume()}

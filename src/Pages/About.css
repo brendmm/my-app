@@ -9,3 +9,10 @@
   #C7C8CC 100%
 );
 }
+
+.react-slidedown {
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    /* transition-duration: 1.2s;
+    transition-timing-function: cubic-bezier(0.1, 0.7, 1.0, 0.1); */
+}
