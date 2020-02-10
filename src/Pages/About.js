@@ -99,11 +99,12 @@ descibeBoston = () => {
     <SlideDown className='my-dropdown-slidedown'>
     {this.state.descibeB ?
     <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
-          Software development is my passion.
-           I have had amazing opporunities to
-           gin experience is different avenues
-           of programming from front end webdesign
-           to machine learning and embedded software.
+          I grew up an hour north of Boston, Massachusettes
+          in a town called Newbury. Although I am currently
+          a student in Virginia, Boston is definitely my home.
+          It is where my friends and family are and where I want
+          to be. Despite this, I love to have new expereinece and
+          explore new places making me open to working anywhere!
           </div> : null}
 
     </SlideDown>

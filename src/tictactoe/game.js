@@ -200,10 +200,10 @@ class Game extends React.Component{
       ((this.state.topRightValue === this.state.centerCenterValue) && (this.state.topRightValue === this.state.bottomLeftValue) && (this.state.topRightValue !== " "))
     ){
       if(this.state.move == 1){
-        return <div>O's Win!</div>
+        return <div>~~~~~O's Win!~~~~~</div>
       }
       else{
-        return <div>X's Win!</div>
+        return <div>~~~~~X's Win!~~~~~</div>
       }
     }
     else{
@@ -212,10 +212,11 @@ class Game extends React.Component{
         (this.state.centerLeftValue !== " ") && (this.state.centerCenterValue !== " ") && (this.state.centerRightValue !== " ") &&
         (this.state.bottomLeftValue !== " ") && (this.state.bottomCenterValue !== " ") && (this.state.bottomRightValue !== " ")
       ){
-        return <div>It's a Draw!</div>
+        return <div>~~~~It's a Draw!~~~~</div>
+
       }
     }
-    return <div>~~~~~~~</div>
+    return <div>~~~~~~~~~~~~~~~~</div>
   }
 
   resetGame = () => {
@@ -294,7 +295,7 @@ class Game extends React.Component{
                     <BottomCenter move = {this.state.move} value = {this.state.bottomCenterValue} updateValue = {(location) => this.updateValue(location)}/>
                     <BottomRight move = {this.state.move} value = {this.state.bottomRightValue} updateValue = {(location) => this.updateValue(location)}/>
                 </div>
-                <div className = "status" style={{float:"left"}}> {this.evaluate()} </div>
+                <div className = "status"> {this.evaluate()} </div>
 
                 <div class="resetButton" onClick = {() => this.resetGame()} >Reset</div>
 
