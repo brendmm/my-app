@@ -155,7 +155,7 @@ Pacman=()=>{
 
     <div style={{textAlign:"center",backgroundColor:"#DFE0E4",minHeight:"100vh",paddingTop:this.state.space}}>
       {console.log(this.props)}
-      {this.fixSpace}
+      {this.fixSpace()}
 
       <Carousel
       arrows
