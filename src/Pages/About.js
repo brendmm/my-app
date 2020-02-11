@@ -60,7 +60,7 @@ descibeSoftware = () => {
     return(
       <SlideDown className='my-dropdown-slidedown'>
       {this.state.descibeSW ?
-      <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
+        <div className="subtitle is-5" style={{padding:"5%",bacakgroundColor:"#F7F8FC"}}>
             Software development is my passion.
              I have had amazing opporunities to
              gain experience is different avenues
@@ -76,7 +76,7 @@ descibeVirginia = () => {
     return(
       <SlideDown className='my-dropdown-slidedown'>
       {this.state.descibeV ?
-        <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
+        <div className="subtitle is-5" style={{padding:"5%",bacakgroundColor:"#F7F8FC"}}>
           In May 2020, I will be graduating with a degree in Computer Engineering.
           The classes I have taken have taught me an incredible amount and
           prepared me for my future career. Some of my favorite classes were:
@@ -98,7 +98,7 @@ descibeBoston = () => {
   return(
     <SlideDown className='my-dropdown-slidedown'>
     {this.state.descibeB ?
-    <div className="subtitle is-5" style={{borderRadius: "5%",padding:"5%",border: "2px solid black",bacakgroundColor:"#F7F8FC"}}>
+    <div className="subtitle is-5" style={{padding:"5%",paddingTop:"9%",bacakgroundColor:"#F7F8FC"}}>
           I grew up an hour north of Boston, Massachusettes
           in a town called Newbury. Although I am currently
           a student in Virginia, Boston is definitely my home.
@@ -114,7 +114,7 @@ descibeBoston = () => {
 
   render() {
     return (
-      <div className = "stripes" style={{maxWidth:"100vw",paddingTop:this.state.space,paddingLeft:"5%",paddingRight:"5%"}}>
+      <div className = "stripes" style={{fontFamily:"Tahoma, Geneva, sans-serif",maxWidth:"100vw",paddingTop:this.state.space,paddingLeft:"5%",paddingRight:"5%"}}>
         {console.log(this.props)}
         {this.fixSpace()}
 
@@ -135,22 +135,23 @@ descibeBoston = () => {
                 <div style={{marginLeft:"10%"}}>
                   Software <br/> Developer
                 </div>
+                {this.descibeSoftware()}
               </div>
-              {this.descibeSoftware()}
+
               <div className="subtitle is-3 is-center" onClick={this.showVirginia} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%",display:"inline-block",minWidth:"100%", marginTop:"2%", border:"2px solid black"}}>
                 <img className="is-rounded"src={graduate} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
                 <div style={{paddingLeft:"10%", marginTop:"0%"}}>
                   Virginia Tech <br/> Alumnus
                 </div>
+                {this.descibeVirginia()}
               </div>
-              {this.descibeVirginia()}
               <div className="subtitle is-3 is-center" onClick={this.showBoston} style={{ background: "#F7F8FC", borderRadius:"25px", paddingLeft:"15%", paddingBottom:"2%",display:"inline-block",minWidth:"100%", border:"2px solid black"}}>
                 <img className="is-rounded"src={location} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
                 <div style={{marginLeft:"5%", marginTop:"5%"}}>
                   Boston, MA
                 </div>
+                {this.descibeBoston()}
               </div>
-              {this.descibeBoston()}
             </div>
             </div>
 

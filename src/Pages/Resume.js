@@ -68,10 +68,10 @@ class Resume extends Component {
 
         <div className="columns">
           <div className = "column is-half" style={{marginBottom:"1%"}}>
-            <div className="button is-link" onClick={this.onResumeClick} style={{width:"70%", minHeight:"40%",marginLeft:"15%",marginRight:"15%"}}>Open Resume in PDF Viewer</div>
+            <div  onClick={this.onResumeClick} style={{borderRadius:"25px",border:"2px solid black",textAlign:"center",width:"70%", minHeight:"40%",marginLeft:"15%",marginRight:"15%"}}>Open Resume in PDF Viewer</div>
           </div>
           <div className = "column is-half" style={{marginBottom:"1%"}}>
-            <div className="button is-link" onClick={this.viewResume} style={{width:"70%", minHeight:"40%",marginLeft:"15%",marginRight:"15%"}}>Open Resume Below</div>
+            <div  onClick={this.viewResume} style={{borderRadius:"25px",border:"2px solid black",textAlign:"center",width:"70%", minHeight:"40%",marginLeft:"15%",marginRight:"15%"}}>Open Resume Below</div>
           </div>
           </div>
           <div id="row" style={{ maxWidth: "100vw", display: "flex", overflow: "hidden"}}>

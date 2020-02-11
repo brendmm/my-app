@@ -66,17 +66,17 @@ class Resume extends Component {
 Botler=()=>{
   return(
     <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
-    <header class="card-header" style={{backgroundColor:"#3f4044"}}>
-       <p class="card-header-title" style={{color:"#F7F8FC"}}>
+    <div class="card-div" style={{backgroundColor:"#3f4044"}}>
+       <div class="card-div-title" style={{color:"#F7F8FC"}}>
          Botler
-       </p>
-     </header>
+       </div>
+     </div>
      <div class="card-content">
         <div class="content" style={{textAlign:"left"}}>
             Botler was an autonomous system that could receive requested items.
             <br/><br/>
             Topics:
-            <ul style={{marginLeft:"5%", fontSize:"15px"}}>
+            <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
               <li>Embedded Software Design</li>
               <li>Multi-threading</li>
               <li>Network Communication</li>
@@ -93,12 +93,12 @@ Botler=()=>{
 }
 Game=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
-    <header class="card-header" style={{backgroundColor:"#3f4044"}}>
-       <p class="card-header-title" style={{color:"#F7F8FC"}}>
+    <div className="cameraard" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
+    <div class="-div" style={{backgroundColor:"#3f4044"}}>
+       <div class="caard-div-title" style={{color:"#F7F8FC"}}>
          Tic Tac Toe AI
-       </p>
-     </header>
+       </div>
+     </div>
      <div class="card-content">
         <div class="content" style={{textAlign:"left"}}>
               I created a simple game of Tic Tac Toe to learn
@@ -107,7 +107,7 @@ Game=()=>{
               compete against!
             <br/><br/>
             Topics:
-            <ul style={{marginLeft:"5%", fontSize:"15px"}}>
+            <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
               <li>Frontend Design</li>
               <li>ReactJS</li>
               <li>Artificial Intelligence</li>
@@ -124,22 +124,24 @@ Game=()=>{
 Pacman=()=>{
   return(
     <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
-    <header class="card-header" style={{backgroundColor:"#3f4044"}}>
-       <p class="card-header-title" style={{color:"#F7F8FC"}}>
+    <div  style={{backgroundColor:"#3f4044"}}>
+       <div  style={{color:"#F7F8FC"}}>
          Berkley PacMan and MNIST Data
-       </p>
-     </header>
-     <div class="card-content">
-        <div class="content" style={{textAlign:"left"}}>
+       </div>
+     </div>
+     <div class="card-contenta" style={{marginLeft:"5%"}}>
+     <br/>
+        <div class="contenta" style={{textAlign:"left"}}>
               Berkley AI:
-            <ul style={{marginLeft:"5%", fontSize:"15px"}}>
+            <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
               <li>Created solutions to Pac Man using artificial intelligence</li>
-              <li>PRactice different algorithms and designs to receive increasingly better results</li>
+              <li>Practice different algorithms and designs to receive increasingly better results</li>
             </ul>
         </div>
-        <div class="content" style={{textAlign:"left"}}>
+        <br/>
+        <div class="contenta" style={{textAlign:"left"}}>
               MNIST Data:
-            <ul style={{marginLeft:"5%", fontSize:"15px"}}>
+            <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
               <li>Used Nueral Networks to categorize handwritten numbers</li>
               <li>Compared different network designs and compared resules</li>
             </ul>
