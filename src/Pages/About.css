@@ -2,10 +2,8 @@
   background: repeating-linear-gradient(
   22deg,
   #F7F8FC,
-  #F7F8FC 10%,
-  #DFE0E4 10%,
-  #DFE0E4 40%,
-  #C7C8CC 40%,
+  #F7F8FC 0%,
+  #C7C8CC 0%,
   #C7C8CC 100%
 );
 }

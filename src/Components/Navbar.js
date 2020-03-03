@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
 import './Navbar.css';
+import colorScheme from "../design.js"
+
 import Github from '../Images/github_logo.png'
 import LinkedIn from '../Images/linkedin_logo.png'
 import { Link } from "react-scroll";
@@ -11,10 +13,6 @@ class Navbar extends Component {
     super(props);
     this.state = {
       isActive: false,
-      about: "transparent",
-      resume: "transparent",
-      projects: "transparent",
-      contact: "transparent"
     };
   }
 
@@ -23,48 +21,15 @@ class Navbar extends Component {
     console.log(this.state.isActive)
   };
 
-  submitData = (item) => {
-    if(item === "about"){
-      this.setState({ isActive: false,
-                      about: "transparent",
-                      resume: "transparent",
-                      projects: "transparent",
-                      contact: "transparent"})
-
-    }
-    else if(item === "resume"){
-      this.setState({ isActive: false,
-                      about: "transparent",
-                      resume: "transparent",
-                      projects: "transparent",
-                      contact: "transparent"})
-    }
-    else if(item === "projects"){
-      this.setState({ isActive: false,
-                      about: "transparent",
-                      resume: "transparent",
-                      projects: "transparent",
-                      contact: "transparent"})
-    }
-    else if(item === "contact"){
-      this.setState({ isActive: false,
-                      about: "transparent",
-                      resume: "transparent",
-                      projects: "transparent",
-                      contact: "transparent"})
-    }
-
-    console.log(item)
-  };
 
   render() {
     return (
     <div style={{maxWidth:"100vw"}}>
-      <nav className="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
+      <nav className="navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation" style={{backgroundColor:colorScheme.darkBlue}}>
 
-        <div className="navbar-brand">
-          <div className="navbar-item">
-            <div className="my_Label">
+        <div className="navbar-brand" style={{backgroundColor:"transparent"}}>
+          <div className="navbar-item" style={{backgroundColor:"transparent"}}>
+            <div style={{color: "white",fontWeight: "bold"}}>
               Brendan Muldowney
             </div>
           </div>
@@ -77,25 +42,25 @@ class Navbar extends Component {
           </a>
         </div>
 
-        <div id="navbarBasicExample" style={{backgrounadColor:"#0f0f0f", color:"white"}} className={"navbar-menu" + (this.state.isActive ? "is-active" : "") }>
+        <div id="navbarBasicExample" style={{color:"white", backgroundColor:"transparent"}} className={"navbar-menu" + (this.state.isActive ? "is-active" : "") }>
           <div className="navbar-start">
-          <Link onClick={() => this.submitData("about")} activeClass="active" className="About" to="About" spy={true} smooth={true} duration={500} >
-            <div className="navbar-item"  style={{color: "white", backgroundColor:this.state.about}}>
+          <Link  activeClass="active" className="About" to="About" spy={true} smooth={true} duration={500} >
+            <div className="navbar-item"  style={{color: "white"}}>
                 About
             </div>
           </Link>
-          <Link onClick={() => this.submitData("resume")} activeClass="active" className="Resume" to="Resume" spy={true} smooth={true} duration={500} >
-            <div className="navbar-item" style={{color: "white", backgroundColor:this.state.resume}}>
+          <Link activeClass="active" className="Resume" to="Resume" spy={true} smooth={true} duration={500} >
+            <div className="navbar-item" style={{color: "white"}}>
                 Resume
             </div>
           </Link>
-          <Link onClick={() => this.submitData("projects")} activeClass="active" className="Project" to="Project" spy={true} smooth={true} duration={500} >
-            <div className="navbar-item" style={{color: "white", backgroundColor:this.state.projects}}>
+          <Link activeClass="active" className="Project" to="Project" spy={true} smooth={true} duration={500} >
+            <div className="navbar-item" style={{color: "white"}}>
                 Projects
             </div>
           </Link>
-          <Link onClick={() => this.submitData("contact")} activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={500} >
-            <div className="navbar-item" style={{color: "white", backgroundColor:this.state.contact}}>
+          <Link activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={500} >
+            <div className="navbar-item" style={{color: "white"}}>
                 Contact
             </div>
           </Link>
@@ -105,10 +70,10 @@ class Navbar extends Component {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button is-link is-outlined" href="https://github.com/brendmm" target="_blank" style={{backgroundColor:"white"}}>
+                <a className="button" href="https://github.com/brendmm" target="_blank" style={{backgroundColor:colorScheme.offWhite, border: "2px solid "+colorScheme.orange}}>
                   <img src={Github} width="30" height="30"/>
                 </a>
-                <a className="button is-link is-outlined" href="https://www.linkedin.com/in/brendan-muldowney-892895132/" target="_blank" style={{backgroundColor:"white"}}>
+                <a className="button" href="https://www.linkedin.com/in/brendan-muldowney-892895132/" target="_blank" style={{backgroundColor:colorScheme.offWhite, border: "2px solid "+colorScheme.orange}}>
                   <img src={LinkedIn} width="30" height="30"/>
                 </a>
               </div>
@@ -122,25 +87,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
-
-// <Link to="/" onClick={() => this.submitData("about")} style={{backgroundColor:this.state.about}}>
-//   <div className="navbar-item"  style={{color: "white", backgroundColor:this.state.about}}>
-//       About
-//   </div>
-// </Link>
-// <Link to="/resume" onClick={() => this.submitData("resume")} style={{backgroundColor:this.state.resume}}>
-//   <div className="navbar-item" style={{color: "white", backgroundColor:this.state.resume}}>
-//       Resume
-//   </div>
-// </Link>
-// <Link to="/projects" onClick={() => this.submitData("projects")} style={{backgroundColor:this.state.projects}}>
-//   <div className="navbar-item" style={{color: "white", backgroundColor:this.state.projects}}>
-//       Projects
-//   </div>
-// </Link>
-// <Link to="/contact" onClick={() => this.submitData("contact")} style={{backgroundColor:this.state.contact}}>
-//   <div className="navbar-item" style={{color: "white", backgroundColor:this.state.contact}}>
-//       Contact
-//   </div>
-// </Link>

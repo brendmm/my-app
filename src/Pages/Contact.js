@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
-import './Contact.css';
 // import Profile from '../Images/Profile.JPG'
 import Phone from '../Images/phone.png'
 import Email from '../Images/email.png'
+import colorScheme from "../design.js"
 
 class Resume extends Component {
   constructor(props) {
@@ -32,7 +32,7 @@ class Resume extends Component {
   render() {
     return (
 
-    <div style={{backgroundColor:"#F7F8FC",minHeight:"100vh",paddingTop:this.state.space}}>
+    <div style={{backgroundColor:colorScheme.offWhite,minHeight:"100vh",paddingTop:this.state.space}}>
       {console.log(this.props)}
       {this.fixSpace()}
       <div className="card column is-6 is-offset-3" style={{backgroundColor:"transparent",bordear:"5px black solid",borderRadius:"25px",marginTop:"15%",boxShadow: "0px 0px 0px"}}>

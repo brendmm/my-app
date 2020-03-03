@@ -5,6 +5,8 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import 'react-pdf/dist/Page/AnnotationLayer.css';
 import throttle from "lodash.throttle"
 import pdf from '../Images/Resume.pdf'
+import colorScheme from "../design.js"
+
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
 class Resume extends Component {
@@ -62,16 +64,19 @@ class Resume extends Component {
 
   render() {
     return (
-      <div className="column" style={{backgroundColor:"transparent",paddingTop:this.state.space}}>
+      <div style={{backgroundColor:colorScheme.grayBlue}}>
+      <div className="column" style={{backgroundColor:colorScheme.offWhite,paddingTop:this.state.space, borderRadius:"0px 4em 4em 0px "}}>
         {console.log(this.props)}
         {this.fixSpace()}
 
         <div className="columns">
-          <div className = "column is-half" style={{marginBottom:"1%"}}>
-            <div  onClick={this.onResumeClick} style={{borderRadius:"25px",border:"2px solid black",textAlign:"center",width:"70%", minHeight:"40%",marginLeft:"15%",marginRight:"15%"}}>Open Resume in PDF Viewer</div>
+          <div className = "column is-half is-offset-one-quarter" style={{marginBottom:"1%"}}>
+            <div  className="subtitle is-3"onClick={this.onResumeClick} style={{borderRadius:"25px",border:"4px solid "+colorScheme.orange,textAlign:"center",width:"70%", minaHeight:"20vh",marginLeft:"15%",marginRight:"15%", paddingTop:"5%",paddingBottom:"5%",color: "#000000",fontSize:""}}>
+              View Resume
+            </div>
           </div>
           <div className = "column is-half" style={{marginBottom:"1%"}}>
-            <div  onClick={this.viewResume} style={{borderRadius:"25px",border:"2px solid black",textAlign:"center",width:"70%", minHeight:"40%",marginLeft:"15%",marginRight:"15%"}}>Open Resume Below</div>
+
           </div>
           </div>
           <div id="row" style={{ maxWidth: "100vw", display: "flex", overflow: "hidden"}}>
@@ -81,6 +86,7 @@ class Resume extends Component {
             {this.displayResume()}
             </div>
           </div>
+      </div>
       </div>
     )
   }
@@ -101,3 +107,5 @@ class PdfComponent extends Component {
 }
 
 export default Resume
+// <div  onClick={this.viewResume} style={{borderRadius:"25px",border:"2px solid "+colorScheme.orange,textAlign:"center",width:"70%", minHeight:"20vh",marginLeft:"15%",marginRight:"15%", color: "#1b5299"}}>
+// Open Resume Below</div>

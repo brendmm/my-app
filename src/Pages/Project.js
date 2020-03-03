@@ -5,6 +5,10 @@ import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import Game from "../tictactoe/game.js";
 import Modal from 'react-responsive-modal';
+import colorScheme from "../design.js"
+import left from '../Images/leftIcon.png'
+import right from '../Images/rightIcon.png'
+import Image from 'react-image-resizer';
 
 
 class Resume extends Component {
@@ -65,14 +69,14 @@ class Resume extends Component {
   }
 Botler=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
-    <div class="card-div" style={{backgroundColor:"#3f4044"}}>
-       <div class="card-div-title" style={{color:"#F7F8FC"}}>
+    <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, height:"80vh",borderRadius:"15px"}}>
+    <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
+       <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
          Botler
        </div>
      </div>
-     <div class="card-content">
-        <div class="content" style={{textAlign:"left"}}>
+     <div class="card-content" style={{textAlign:"left",backgroundColor:colorScheme.offWhite}}>
+        <div class="content">
             Botler was an autonomous system that could receive requested items.
             <br/><br/>
             Topics:
@@ -83,7 +87,7 @@ Botler=()=>{
               <li>Controls</li>
             </ul>
             <br/>
-            <button class="button is-large is-link" onClick={() => this.onOpenModal("botler")}>
+            <button class="button is-large is-link " onClick={() => this.onOpenModal("botler")} style={{ border:"2px solid "+colorScheme.orange, backgroundColor:"transparent", color:"black"}}>
               More Info
             </button>
         </div>
@@ -93,10 +97,10 @@ Botler=()=>{
 }
 Game=()=>{
   return(
-    <div className="cameraard" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
-    <div class="-div" style={{backgroundColor:"#3f4044"}}>
-       <div class="caard-div-title" style={{color:"#F7F8FC"}}>
-         Tic Tac Toe AI
+    <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, height:"80vh",borderRadius:"15px"}}>
+    <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
+       <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
+       Tic Tac Toe
        </div>
      </div>
      <div class="card-content">
@@ -113,7 +117,7 @@ Game=()=>{
               <li>Artificial Intelligence</li>
             </ul>
             <br/>
-            <button class="button is-large is-link" onClick={() => this.onOpenModal("game")}>
+            <button class="button is-large is-link " onClick={() => this.onOpenModal("game")} style={{ border:"2px solid "+colorScheme.orange, backgroundColor:"transparent", color:"black"}}>
               Try It Out
             </button>
         </div>
@@ -123,9 +127,9 @@ Game=()=>{
 }
 Pacman=()=>{
   return(
-    <div className="card" style={{width:this.determineWidth(), height:"80vh",borderRadius:"15px", backgroundColor:"#F7F8FC",marginBottom:"5%"}}>
-    <div  style={{backgroundColor:"#3f4044"}}>
-       <div  style={{color:"#F7F8FC"}}>
+    <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, height:"80vh",borderRadius:"15px"}}>
+    <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
+       <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
          Berkley PacMan and MNIST Data
        </div>
      </div>
@@ -154,21 +158,23 @@ Pacman=()=>{
 
   render() {
     return (
-
-    <div style={{textAlign:"center",backgroundColor:"#DFE0E4",minHeight:"100vh",paddingTop:this.state.space}}>
+<div style={{backgroundColor:colorScheme.offWhite}}>
+    <div style={{textAlign:"center",backgroundColor:colorScheme.grayBlue,minHeight:"100vh",paddingTop:this.state.space,paddingBottom: "5em",  borderRadius:"5em 0px 0px 5em"}}>
       {console.log(this.props)}
       {this.fixSpace()}
 
       <Carousel
-      arrows
-      infinite
-      clickToChange
-      animationSpeed={1500}
-      autoPlay={3000}
-      stopAutoPlayOnHover
-      dots
-      slidesPerPage={this.determineSlides()}
-      centered
+        arrowLeft={<img name="arrow-left" src={left} />}
+        arrowRight={<img name="arrow-right" src={right} />}
+        addArrowClickHandler
+        infinite
+        clickToChange
+        animationSpeed={1500}
+        autoPlay={3000}
+        stopAutoPlayOnHover
+        dots
+        slidesPerPage={this.determineSlides()}
+        centered
       >
       {this.Botler()}
       {this.Game()}
@@ -180,7 +186,7 @@ Pacman=()=>{
         onClose={this.onCloseModal}
         style={{width:"80vw"}}
         center
-        showCloseIcon={false}
+        showCloseIcon={true}
         focusTrapped={false}
 
         >
@@ -190,7 +196,7 @@ Pacman=()=>{
       }
       {this.state.botlerIsOpen ?
         <Modal open={this.state.botlerIsOpen} onClose={this.onCloseModal} center>
-            <div class="container">
+            <div class="container" style={{marginTop:"3%"}}>
             The objective was for the rover to retrieve  requested object.
             By showing a handwritten word to a camera, They system would
             begin by running an optical character recognition software to
@@ -209,7 +215,7 @@ Pacman=()=>{
               <div class="columns">
                 <div class="column">
                 {this.state.spaceState<3 ?
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/FZ6dC4iSaqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                <iframe style={{marginLeft:"12%"}} width="560" height="315" src="https://www.youtube.com/embed/FZ6dC4iSaqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                   :
                   <a className="button is-link" href="https://www.youtube.com/watch?v=FZ6dC4iSaqo" target="_blank">
                     Go To Video
@@ -221,7 +227,7 @@ Pacman=()=>{
         </Modal> : null
       }
     </div>
-
+</div>
     )
   }
 }

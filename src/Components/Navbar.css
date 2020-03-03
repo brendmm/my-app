@@ -1,19 +1,9 @@
-.my_Label{
-  color:#C7C8CC;
-  font-weight: bold;
-}
-
 .navbar_Spacing{
   padding-right: 5%;
   float:left;
   color: white;
 }
 
-.navbar {
-background: #564f74
-/* background-color: #d3d3d3; */
-/* padding-bottom: 2%; */
-}
 .bottom{
   padding-bottom: 5%;
   background-color: #02012B;
