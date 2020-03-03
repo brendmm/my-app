@@ -33,7 +33,7 @@ fixSpace = () => {
       this.setState({ space: "10%", spaceState: this.props.space });
     }
     else if(this.props.space === 3){
-      this.setState({ space: "20%", spaceState: this.props.space });
+      this.setState({ space: "10%", spaceState: this.props.space });
     }
     console.log(this.state.space)
   }
@@ -58,7 +58,7 @@ fixSpace = () => {
                   <div >Brendan Muldowney</div>
                 </div>
             </div>
-            <div className="column is-two-fifths" style={{textAlign:"center",color:colorScheme.offWhite,marginTop:"0%"}}>
+            <div className="column is-4" style={{textAlign:"center",color:colorScheme.offWhite,marginTop:"0%"}}>
 
             <div style={{display: "inline-block"}}>
             <img className="is-rounded"src={headshot} width="100%" alt="Placeholder image" style={{float:"left", paddingTop:"4%"}}/>
