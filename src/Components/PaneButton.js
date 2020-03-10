@@ -35,7 +35,7 @@ descibeData = (info) => {
     return(
       <SlideDown className='my-dropdown-slidedown'>
       {this.state.descibe ?
-        <div className="subtitle is-5" style={{padding:"5%",bacakgroundColor:"#F7F8FC"}}>
+        <div className="subtitle is-5" style={{padding:"5%",bacakgroundColor:"#F7F8FC", fontSize:"0.7em"}}>
             {info}
             </div> : null}
 
@@ -50,7 +50,7 @@ descibeData = (info) => {
     return (
       <div className="subtitle is-3 is-center" onClick={this.showData} style={{ background: colorScheme.offWhite, borderRadius:"25px", paddingLeft:"10%", display:"inline-block",minWidth:"100%",paddingBottom:"2%", border:"4px solid "+colorScheme.orange, color: "black"}}>
         <img className="is-rounded"src={this.props.src} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
-        <div style={{marginLeft:"10%"}}>
+        <div style={{marginLeft:"10%", fontSize:"1em"}}>
           {this.props.label}
         </div>
         {this.descibeData(this.props.info)}

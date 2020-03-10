@@ -17,42 +17,19 @@ import Image from 'react-image-resizer';
 class About extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      space: "0%",      //changing top padding depending on screen width
-      spaceState: 0,     //track if width changes so there is no recursive rerendering
-    };
+    this.state = {};
   }
-
-//Determine padding to set
-fixSpace = () => {
-  if(this.props.space!=this.state.spaceState){
-    if(this.props.space === 1){
-      this.setState({ space: "5%", spaceState: this.props.space });
-    }
-    else if(this.props.space === 2){
-      this.setState({ space: "10%", spaceState: this.props.space });
-    }
-    else if(this.props.space === 3){
-      this.setState({ space: "10%", spaceState: this.props.space });
-    }
-    console.log(this.state.space)
-  }
-}
-
 
   render() {
     return (
       <div style={{backgroundColor:colorScheme.offWhite}}>
-      <div  style={{backgroundColor:colorScheme.grayBlue,fontFamily:"Tahoma, Geneva, sans-serif",maxWidth:"100vw",paddingTop:this.state.space,paddingLeft:"5%",paddingRight:"5%", paddingBottom:"5em",borderRadius:"0px 0px 0px 5em"}}>
-
-        {console.log(this.props)}
-        {this.fixSpace()}
+      <div  style={{backgroundColor:colorScheme.grayBlue,fontFamily:"Tahoma, Geneva, sans-serif",maxWidth:"100vw",paddingTop:"10vh",paddingLeft:"5%",paddingRight:"5%", paddingBottom:"5%",borderRadius:"0px 0px 0px 5em"}}>
 
         <div  className="title is-4 is-center" style={{  fontSize: "calc(50px + 2vmin)"}}>
           <div className="columns">
 
 
-            <div className="column" style={{textAlign:"left",marginTop:"10%"}}>
+            <div className="column" style={{textAlign:"left",marginTop:"8%"}}>
                 <div style={{textAlign:"center",color:colorScheme.lightBlue,minWidth:"100%", fontSize:"1em"}}>
                   <div className="subtitle is-3 is-center" style={{textAlign:"center",color:colorScheme.offWhite}}> - Hi, I'm -</div>
                   <div >Brendan Muldowney</div>

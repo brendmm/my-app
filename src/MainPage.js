@@ -12,7 +12,7 @@ import Contact from "./Pages/Contact";
 import { Element } from "react-scroll";
 
 class Home extends Component {
-  constructor(props) {
+    constructor(props) {
     super(props);
     this.state = {
       collapsed: 1
@@ -43,26 +43,26 @@ class Home extends Component {
       window.removeEventListener('resize', this.handleWindowResize);
     }
 
-  render() {
-    console.log(colorScheme)
-    return (
-        <div className="App-header">
-          <Navbar/>
-          <Element name="About" className="element">
-              <About space={this.state.collapsed} />
-          </Element>
-          <Element name="Resume" className="element">
-            <Resume space={this.state.collapsed}/>
-          </Element>
-          <Element name="Project" className="element">
-              <Project space={this.state.collapsed}/>
-          </Element>
-          <Element name="Contact" className="element">
-            <Contact space={this.state.collapsed}/>
-          </Element>
-        </div>
-    );
-  }
+    render() {
+      console.log(colorScheme)
+      return (
+          <div className="App-header">
+            <Navbar/>
+            <Element name="About" className="element">
+                <About space={this.state.collapsed} />
+            </Element>
+            <Element name="Resume" className="element">
+              <Resume space={this.state.collapsed}/>
+            </Element>
+            <Element name="Project" className="element">
+                <Project space={this.state.collapsed}/>
+            </Element>
+            <Element name="Contact" className="element">
+              <Contact space={this.state.collapsed}/>
+            </Element>
+          </div>
+      );
+    }
 }
 
 export default Home;

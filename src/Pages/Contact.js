@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
-// import Profile from '../Images/Profile.JPG'
 import Phone from '../Images/phone.png'
 import Email from '../Images/email.png'
 import colorScheme from "../design.js"
@@ -8,33 +7,13 @@ import colorScheme from "../design.js"
 class Resume extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      space: "0%",
-      spaceState: 0
-    };
-  }
-
-  fixSpace = () => {
-  if(this.props.space!=this.state.spaceState){
-    if(this.props.space === 1){
-      this.setState({ space: "5%", spaceState: this.props.space });
-    }
-    else if(this.props.space === 2){
-      this.setState({ space: "10%", spaceState: this.props.space });
-    }
-    else if(this.props.space === 3){
-      this.setState({ space: "20%", spaceState: this.props.space });
-    }
-    console.log(this.state.space)
-  }
+    this.state = {};
   }
 
   render() {
     return (
 
-    <div style={{backgroundColor:colorScheme.offWhite,minHeight:"100vh",paddingTop:this.state.space}}>
-      {console.log(this.props)}
-      {this.fixSpace()}
+    <div style={{backgroundColor:colorScheme.offWhite,minHeight:"100vh",paddingTop:"10vh"}}>
       <div className="card column is-6 is-offset-3" style={{backgroundColor:"transparent",bordear:"5px black solid",borderRadius:"25px",marginTop:"15%",boxShadow: "0px 0px 0px"}}>
 
         <div className = "card column is-10 is-offset-1" style={{backgroundColor:"transparent",paddingTop:"5%",paddingBottom:"5%",boxShadow: "0px 0px 0px",borderRadius:"25px"}}>
@@ -82,9 +61,3 @@ class Resume extends Component {
 }
 
 export default Resume
-// <div className="column is-one-quarter" style={{marginLeft:"5%"}}>
-//
-//     <figure className="image is-128x128">
-//         <img src={Profile} alt="Placeholder image" style={{marginTop:"7%",border: "4px solid black"}}/>
-//     </figure>
-// </div>
