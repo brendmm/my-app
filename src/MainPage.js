@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
 import './MainPage.css';
-import colorScheme from "./design.js"
+import {colorScheme, buttonStyle} from "./design.js"
 
 import Navbar from './Components/Navbar';
 import About from "./Pages/About";
@@ -20,7 +20,6 @@ class Home extends Component {
   }
 
     handleWindowResize = () => {
-      console.log("here")
       if(this.state.collapsed!==1 && window.innerWidth>1023){
         this.setState({ collapsed: 1 });
         console.log(this.state.collapsed)
@@ -66,30 +65,3 @@ class Home extends Component {
 }
 
 export default Home;
-
-
-/*
-<div className="App-header">
-      <Route
-        exact
-        path="/"
-        render={<About/>}
-      />
-    <Navbar/>
-    </div>
-    */
-
-    // <Switch >
-    //   <Route path="/resume">
-    //     <Resume/>
-    //   </Route>
-    //   <Route path="/projects">
-    //     projects
-    //   </Route>
-    //   <Route path="/contact">
-    //     <Contact/>
-    //   </Route>
-    //   <Route path="/">
-    //     <About/>
-    //   </Route>
-    // </Switch>

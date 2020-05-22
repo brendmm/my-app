@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "bulma/css/bulma.css";
 import Phone from '../Images/phone.png'
 import Email from '../Images/email.png'
-import colorScheme from "../design.js"
+import {colorScheme, buttonStyle} from "../design.js"
 
 class Resume extends Component {
   constructor(props) {

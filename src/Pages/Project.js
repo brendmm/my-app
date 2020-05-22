@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
-import './Contact.css';
+
 import Carousel from '@brainhubeu/react-carousel';
 import '@brainhubeu/react-carousel/lib/style.css';
 import Game from "../tictactoe/game.js";
 import Modal from 'react-responsive-modal';
-import colorScheme from "../design.js"
+import {colorScheme, buttonStyle} from "../design.js"
 import left from '../Images/leftIcon.png'
 import right from '../Images/rightIcon.png'
 import Image from 'react-image-resizer';
@@ -87,7 +87,7 @@ class Resume extends Component {
                 <li>Controls</li>
               </ul>
               <br/>
-              <button class="button is-large is-link " onClick={() => this.onOpenModal("botler")} style={{ border:"2px solid "+colorScheme.orange, backgroundColor:"transparent", color:"black"}}>
+              <button class="button is-large is-link " onClick={() => this.onOpenModal("botler")} style={buttonStyle}>
                 More Info
               </button>
           </div>
@@ -117,7 +117,7 @@ class Resume extends Component {
                 <li>Artificial Intelligence</li>
               </ul>
               <br/>
-              <button class="button is-large is-link " onClick={() => this.onOpenModal("game")} style={{ border:"2px solid "+colorScheme.orange, backgroundColor:"transparent", color:"black"}}>
+              <button class="button is-large is-link " onClick={() => this.onOpenModal("game")} style={buttonStyle}>
                 Try It Out
               </button>
           </div>

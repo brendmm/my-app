@@ -6,4 +6,7 @@ const colorScheme = {
   offWhite : "#DAE0F2"
 }
 
-export default colorScheme
+
+const buttonStyle = {backgroundColor:colorScheme.offWhite, border: "4px solid "+colorScheme.orange, color: "black"}
+
+export {colorScheme, buttonStyle}

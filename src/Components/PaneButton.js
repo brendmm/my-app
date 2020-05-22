@@ -5,18 +5,14 @@ import headshot from '../Images/Headshot.png'
 import software from '../Images/software.png'
 import graduate from '../Images/graduate.png'
 import location from '../Images/location.png'
-import colorScheme from "../design.js"
+import {colorScheme, buttonStyle} from "../design.js"
 
 import {SlideDown} from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
-// import cpp from '../Images/c++_logo.png'
-// import python from '../Images/python_logo.png'
-// import react from '../Images/react_logo.png'
-
-// import Skill from '../Components/Skill.js'
 
 import Image from 'react-image-resizer';
 
+const paneStyle = { borderRadius:"25px", paddingLeft:"10%", display:"inline-block",minWidth:"100%",paddingBottom:"2%",  color: "black"}
 class PaneButton extends Component {
   constructor(props) {
     super(props);
@@ -48,7 +44,7 @@ descibeData = (info) => {
 
   render() {
     return (
-      <div className="subtitle is-3 is-center" onClick={this.showData} style={{ background: colorScheme.offWhite, borderRadius:"25px", paddingLeft:"10%", display:"inline-block",minWidth:"100%",paddingBottom:"2%", border:"4px solid "+colorScheme.orange, color: "black"}}>
+      <div className="subtitle is-3 is-center" onClick={this.showData} style={{...paneStyle,...buttonStyle}}>
         <img className="is-rounded"src={this.props.src} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
         <div style={{marginLeft:"10%", fontSize:"1em"}}>
           {this.props.label}

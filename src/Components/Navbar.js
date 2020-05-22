@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
-import './Navbar.css';
-import colorScheme from "../design.js"
+import {colorScheme, buttonStyle} from "../design.js"
 
 import Github from '../Images/github_logo.png'
 import LinkedIn from '../Images/linkedin_logo.png'
@@ -70,10 +69,10 @@ class Navbar extends Component {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button" href="https://github.com/brendmm" target="_blank" style={{backgroundColor:colorScheme.offWhite, border: "2px solid "+colorScheme.orange}}>
+                <a className="button" href="https://github.com/brendmm" target="_blank" style={buttonStyle}>
                   <img src={Github} width="30" height="30"/>
                 </a>
-                <a className="button" href="https://www.linkedin.com/in/brendan-muldowney-892895132/" target="_blank" style={{backgroundColor:colorScheme.offWhite, border: "2px solid "+colorScheme.orange}}>
+                <a className="button" href="https://www.linkedin.com/in/brendan-muldowney-892895132/" target="_blank" style={buttonStyle}>
                   <img src={LinkedIn} width="30" height="30"/>
                 </a>
               </div>
