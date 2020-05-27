@@ -21,7 +21,9 @@ class Game extends React.Component{
   constructor(props){
       super(props)
       this.state = {
+        game: false,
         move: 0,
+        status: "~~~~~~~",
         topLeftValue: " ",
         topCenterValue: " ",
         topRightValue: " ",
@@ -200,10 +202,10 @@ class Game extends React.Component{
       ((this.state.topRightValue === this.state.centerCenterValue) && (this.state.topRightValue === this.state.bottomLeftValue) && (this.state.topRightValue !== " "))
     ){
       if(this.state.move == 1){
-        return <div>~~~~~O's Win!~~~~~</div>
+        this.setState({game: true, status: "O's Win!"})
       }
       else{
-        return <div>~~~~~X's Win!~~~~~</div>
+        this.setState({game: true, status: "X's Win!"})
       }
     }
     else{
@@ -212,17 +214,18 @@ class Game extends React.Component{
         (this.state.centerLeftValue !== " ") && (this.state.centerCenterValue !== " ") && (this.state.centerRightValue !== " ") &&
         (this.state.bottomLeftValue !== " ") && (this.state.bottomCenterValue !== " ") && (this.state.bottomRightValue !== " ")
       ){
-        return <div>~~~~It's a Draw!~~~~</div>
+        this.setState({game: true, status: "It's a Draw!"})
 
       }
     }
-    return <div>~~~~~~~~~~~~~~~~</div>
   }
 
   resetGame = () => {
     this.setState(() => {
       return {
+        game: false,
         move: 0,
+        status: "~~~~~~~",
         topLeftValue: " ",
         topCenterValue: " ",
         topRightValue: " ",
@@ -278,6 +281,8 @@ class Game extends React.Component{
       return (
           <div className="App">
             <div className = "section">
+            {!this.state.game ?
+              <div>
                 <div className = "columns" style={{height:"100%"}}>
                     <TopLeft move = {this.state.move} value = {this.state.topLeftValue} updateValue = {(location) => this.updateValue(location)}/>
                     <TopCenter move = {this.state.move} value = {this.state.topCenterValue} updateValue = {(location) => this.updateValue(location)}/>
@@ -295,7 +300,11 @@ class Game extends React.Component{
                     <BottomCenter move = {this.state.move} value = {this.state.bottomCenterValue} updateValue = {(location) => this.updateValue(location)}/>
                     <BottomRight move = {this.state.move} value = {this.state.bottomRightValue} updateValue = {(location) => this.updateValue(location)}/>
                 </div>
-                <div className = "status"> {this.evaluate()} </div>
+                {this.evaluate()}
+                </div>
+                : null
+              }
+                <div className = "status" style={{color:"green",fontSize:"3em"}}> {this.state.status} </div>
 
                 <div class="resetButton" onClick = {() => this.resetGame()} >Reset</div>
 

@@ -10,29 +10,129 @@ import left from '../Images/leftIcon.png'
 import right from '../Images/rightIcon.png'
 import Image from 'react-image-resizer';
 
+const projects = [
+  {
+    title: "Botler",
+    description: "Botler was an autonomous system that could retrieve requested items.",
+    topics: [
+      "Embedded Software Design",
+      "Multi-threading",
+      "Network Communication",
+      "Controls"
+    ],
+    hasModal: true,
+    hasGithub: false,
+    hasLink: false,
+    modalTitle:"More Info",
+    linkDesc: null,
+    link: null,
+    githubLink: null,
+    modalInfo: <div class="container" style={{marginTop:"3%"}}>
+        The objective was for the rover to retrieve  requested object.
+        By showing a handwritten word to a camera, They system would
+        begin by running an optical character recognition software to
+        determine what the desired item was. The rover would then
+        navigate its way to the robotic arm using a combination of
+        pixycam and ultrasonic distance sensor data. Once the rover
+        arrives, the arm would then determine whic item it is supposed
+        to grab, pick it up, and place it on the rover. The rover would
+        then navigate back to the start position, brining the requested item.
+        <br/>
+        <br/>
+        Here is a video presentation of the project, including an in-depth
+        explanation and demonstration of the system.
+        <br/>
+        <br/>
+          <div class="columns">
+            <div class="column">
+            {1 ?
+            <iframe style={{marginLeft:"12%"}} width="560" height="315" src="https://www.youtube.com/embed/FZ6dC4iSaqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+              :
+              <a className="button is-link" href="https://www.youtube.com/watch?v=FZ6dC4iSaqo" target="_blank">
+                Go To Video
+              </a>
+            }
+            </div>
+          </div>
+              </div>
+  },
+  {
+    title: "MNIST Data Neural Networks",
+    description: `This is a machine learning project where
+    different implementations of neural networks were built
+    and compared in categorizing the MNIST Dataset.`,
+    topics: [
+      "Frontend Design",
+      "ReactJS",
+      "Artificial Intelligence"
+    ],
+    hasModal: false,
+    modalTitle: null,
+    modalInfo: null,
+    hasGithub: true,
+    hasLink: true,
+    linkDesc: "Mnist Data",
+    link: "http://yann.lecun.com/exdb/mnist/",
+    githubLink: "https://github.com/brendmm/Mnist-Dataset-NN",
 
-class Resume extends Component {
+  },
+  {
+    title: "Tic Tac Toe",
+    description: `I created a simple game of Tic Tac Toe to learn
+    frontend development in ReactJS. However I also wanted
+    someone to play against, so I created an optional AI to
+    compete against!`,
+    topics: [
+      "Machine Learning",
+      "Neural Netowrks",
+      "Image Recognition"
+    ],
+    hasGithub: false,
+    hasLink: false,
+    linkDesc: null,
+    link: null,
+    githubLink: null,
+    hasModal: true,
+    modalTitle:"Try it out",
+    modalInfo: <Game/>
+  },
+  {
+    title: "Plotscript",
+    description: `Plotscript is a lisp scripting language. The goal of this project
+    in school was to fully show us the tools of object oriented programming. Along
+    the way I was able to learn about GUI implementation, unit testing, multi
+    threading, and more`,
+    topics: [
+      "Object Oriented Programming",
+      "GUI Design",
+      "Unit Testing"
+    ],
+    hasGithub: true,
+    hasLink: false,
+    linkDesc: null,
+    link: null,
+    githubLink: "https://github.com/brendmm/Plotscript",
+    hasModal: false,
+    modalTitle:null,
+    modalInfo: null
+  }
+]
+
+class Project extends Component {
   constructor(props) {
     super(props)
     this.state = {
       spaceState: 0,
-      botlerIsOpen: false,
-      gameIsOpen: false
+      modalState: false,
+      modalVal : null
     };
   }
-  onOpenModal = (val) => {
-    console.log(val)
-    if(val==="botler"){
-      this.setState({botlerIsOpen: true });
-    }
-    else if(val==="game"){
-          this.setState({gameIsOpen: true });
-        }
+  onOpenModal = (state, val) => {
+      this.setState({modalState: true, modalVal: val });
   };
 
   onCloseModal = () => {
-    this.setState({ botlerIsOpen: false,
-                    gameIsOpen: false });
+    this.setState({ modalState: false});
   };
 
   fixSpace = () => {
@@ -67,89 +167,47 @@ class Resume extends Component {
     }
   }
 
-  Botler=()=>{
+  createPage=(item,index)=>{
     return(
       <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, height:"80vh",borderRadius:"15px"}}>
       <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
          <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
-           Botler
+           {item.title}
          </div>
        </div>
        <div class="card-content" style={{textAlign:"left",backgroundColor:colorScheme.offWhite}}>
           <div class="content">
-              Botler was an autonomous system that could retrieve requested items.
-              <br/><br/>
+              {item.description}
+
+              <br/>
+              {item.hasLink ?
+                <div>
+                  <a className="button" href={item.link} target="_blank" style={{border: "0px solid "+colorScheme.offWhite, color: colorScheme.grayBlue, backgroundColor: colorScheme.offWhite}}>
+                    More Information on {item.linkDesc}
+                  </a>
+                </div>: null
+
+            }
+              <br/>
               Topics:
               <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
-                <li>Embedded Software Design</li>
-                <li>Multi-threading</li>
-                <li>Network Communication</li>
-                <li>Controls</li>
+                {item.topics.map((name, index) => (
+                  <li key={index}>
+                    {name}
+                  </li>
+                ))}
               </ul>
               <br/>
-              <button class="button is-large is-link " onClick={() => this.onOpenModal("botler")} style={buttonStyle}>
-                More Info
-              </button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-  Game=()=>{
-    return(
-      <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, height:"80vh",borderRadius:"15px"}}>
-      <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
-         <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
-         Tic Tac Toe
-         </div>
-       </div>
-       <div class="card-content">
-          <div class="content" style={{textAlign:"left"}}>
-                I created a simple game of Tic Tac Toe to learn
-                frontend development in ReactJS. However I also wanted
-                someone to play against, so I created an optional AI to
-                compete against!
-              <br/><br/>
-              Topics:
-              <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
-                <li>Frontend Design</li>
-                <li>ReactJS</li>
-                <li>Artificial Intelligence</li>
-              </ul>
-              <br/>
-              <button class="button is-large is-link " onClick={() => this.onOpenModal("game")} style={buttonStyle}>
-                Try It Out
-              </button>
-          </div>
-        </div>
-      </div>
-    )
-  }
-  Pacman=()=>{
-    return(
-      <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, height:"80vh",borderRadius:"15px"}}>
-      <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
-         <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
-           Berkley PacMan and MNIST Data
-         </div>
-       </div>
-       <div class="card-contenta" style={{marginLeft:"5%"}}>
-       <br/>
-          <div class="contenta" style={{textAlign:"left"}}>
-                Berkley AI:
-              <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
-                <li>Created solutions to Pac Man using artificial intelligence</li>
-                <li>Practice different algorithms and designs to receive increasingly better results</li>
-              </ul>
-          </div>
-          <br/>
-          <div class="contenta" style={{textAlign:"left"}}>
-                MNIST Data:
-              <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
-                <li>Used Nueral Networks to categorize handwritten numbers</li>
-                <li>Compared different network designs and compared resules</li>
-              </ul>
-              <br/>
+              {item.hasModal ?
+              <button class="button is-large is-link " onClick={() => this.onOpenModal(item.title, item.modalInfo)} style={buttonStyle}>
+                {item.modalTitle}
+              </button>  : null
+            }
+            {item.hasGithub ?
+              <a className="button is-large is-link " href={item.githubLink} target="_blank" style={buttonStyle}>
+                    View Github Repo
+              </a>  : null
+          }
           </div>
         </div>
       </div>
@@ -161,68 +219,24 @@ class Resume extends Component {
       <div style={{backgroundColor:colorScheme.offWhite}}>
           <div style={{textAlign:"center",backgroundColor:colorScheme.grayBlue,minHeight:"100vh",paddingTop:"10vh",paddingBottom: "10vh",  borderRadius:"5em 0px 0px 5em"}}>
             {this.fixSpace()}
-
             <Carousel
               arrowLeft={<img name="arrow-left" src={left} />}
               arrowRight={<img name="arrow-right" src={right} />}
               addArrowClickHandler
               infinite
               clickToChange
-              animationSpeed={1500}
-              autoPlay={3000}
+              animationSpeed={2000}
+              autoPlay={7000}
               stopAutoPlayOnHover
               dots
               slidesPerPage={this.determineSlides()}
               centered
             >
-            {this.Botler()}
-            {this.Game()}
-            {this.Pacman()}
+              {projects.map(this.createPage)}
             </Carousel>
-            {this.state.gameIsOpen ?
-              <Modal
-              open={this.state.gameIsOpen}
-              onClose={this.onCloseModal}
-              style={{width:"80vw"}}
-              center
-              showCloseIcon={true}
-              focusTrapped={false}
-
-              >
-
-                  <Game/>
-              </Modal> : null
-            }
-            {this.state.botlerIsOpen ?
-              <Modal open={this.state.botlerIsOpen} onClose={this.onCloseModal} center>
-                  <div class="container" style={{marginTop:"3%"}}>
-                  The objective was for the rover to retrieve  requested object.
-                  By showing a handwritten word to a camera, They system would
-                  begin by running an optical character recognition software to
-                  determine what the desired item was. The rover would then
-                  navigate its way to the robotic arm using a combination of
-                  pixycam and ultrasonic distance sensor data. Once the rover
-                  arrives, the arm would then determine whic item it is supposed
-                  to grab, pick it up, and place it on the rover. The rover would
-                  then navigate back to the start position, brining the requested item.
-                  <br/>
-                  <br/>
-                  Here is a video presentation of the project, including an in-depth
-                  explanation and demonstration of the system.
-                  <br/>
-                  <br/>
-                    <div class="columns">
-                      <div class="column">
-                      {this.state.spaceState<3 ?
-                      <iframe style={{marginLeft:"12%"}} width="560" height="315" src="https://www.youtube.com/embed/FZ6dC4iSaqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        :
-                        <a className="button is-link" href="https://www.youtube.com/watch?v=FZ6dC4iSaqo" target="_blank">
-                          Go To Video
-                        </a>
-                      }
-                      </div>
-                    </div>
-                  </div>
+            {this.state.modalState ?
+              <Modal open={this.state.modalState} onClose={this.onCloseModal} center>
+                {this.state.modalVal}
               </Modal> : null
             }
           </div>
@@ -231,10 +245,4 @@ class Resume extends Component {
   }
 }
 
-export default Resume
-// <div className="column is-one-quarter" style={{marginLeft:"5%"}}>
-//
-//     <figure className="image is-128x128">
-//         <img src={Profile} alt="Placeholder image" style={{marginTop:"7%",border: "4px solid black"}}/>
-//     </figure>
-// </div>
+export default Project

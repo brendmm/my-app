@@ -47,7 +47,7 @@ class About extends Component {
                 src = {software}
                 label = <div>Software <br/> Developer</div>
                 info = <div>
-                        Software development is my passion.
+                        I love to develop software.
                         I have had amazing opporunities to
                         gain experience in different avenues
                         of programming from front end webdesign

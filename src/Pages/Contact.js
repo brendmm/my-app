@@ -38,7 +38,7 @@ class Resume extends Component {
                     978-270-4538
                   </div>
                   </div>
-                  <div className="column is-half">
+                  <div className="column is-two-thirds">
                   <span className="icon" style={{float:"left"}}>
                     <img className="is-rounded"src={Email} alt="Placeholder image"/>
                   </span>
@@ -46,7 +46,7 @@ class Resume extends Component {
                   <div className="title is-5" style={{float:"left", marginRight:"2%",  marginLeft:"2%"}}>
                     Email:
                   </div>
-                  brendmm@vt.edu
+                  bmuldow@gmail.com
                 </div>
                 </div>
                 </div>
