@@ -134,31 +134,50 @@ class Project extends Component {
     this.setState({ modalState: false});
   };
 
-  fixSpace = () => {
-  if(this.props.space!=this.state.spaceState){
-    if(this.props.space === 1){
-      this.setState({spaceState: this.props.space });
-    }
-    else if(this.props.space === 2){
-      this.setState({spaceState: this.props.space });
-    }
-    else if(this.props.space === 3){
-      this.setState({spaceState: this.props.space });
-    }
-  }
-  }
+  // fixSpace = () => {
+  // if(this.props.space!=this.state.spaceState){
+  //   if(this.props.space === 1){
+  //     this.setState({spaceState: this.props.space });
+  //   }
+  //   else if(this.props.space === 2){
+  //     this.setState({spaceState: this.props.space });
+  //   }
+  //   else if(this.props.space === 3){
+  //     this.setState({spaceState: this.props.space });
+  //   }
+  // }
+  // }
 
-  determineSlides = () => {
-    if(this.state.spaceState === 1){
-      return 2
+  handleWindowResize = () => {
+    console.log('here')
+    if(window.innerWidth<700){
+      this.setState({ spaceState: 1 });
     }
     else{
-      return 1
+      this.setState({ spaceState: 2 });
     }
   }
 
+  componentDidMount() {
+    console.log('test')
+
+    window.addEventListener('resize', this.handleWindowResize());
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('resize', this.handleWindowResize());
+  }
+  // determineSlides = () => {
+  //   if(this.state.spaceState === 1){
+  //     return 2
+  //   }
+  //   else{
+  //     return 1
+  //   }
+  // }
+
   determineWidth = () => {
-    if(this.state.spaceState === 1){
+    if(this.state.spaceState === 2){
       return "40vw"
     }
     else{
@@ -216,10 +235,10 @@ class Project extends Component {
     return (
       <div style={{backgroundColor:colorScheme.offWhite}}>
           <div style={{textAlign:"center",backgroundColor:colorScheme.grayBlue,minHeight:"100vh",paddingTop:"10vh",paddingBottom: "10vh",  borderRadius:"5em 0px 0px 5em"}}>
-            {this.fixSpace()}
+          {console.log(this.state.spaceState)}
             <Carousel
-              arrowLeft={<img name="arrow-left" src={left} />}
-              arrowRight={<img name="arrow-right" src={right} />}
+              arrowLeft={this.state.spaceState === 1 ? null :<img name="arrow-left" src={left} />  }
+              arrowRight={this.state.spaceState === 1 ? null : <img name="arrow-right" src={right} /> }
               addArrowClickHandler
               infinite
               clickToChange
@@ -227,7 +246,7 @@ class Project extends Component {
               autoPlay={7000}
               stopAutoPlayOnHover
               dots
-              slidesPerPage={this.determineSlides()}
+              slidesPerPage={this.state.spaceState}
               centered
             >
               {projects.map(this.createPage)}
