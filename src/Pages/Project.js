@@ -237,8 +237,8 @@ class Project extends Component {
           <div style={{textAlign:"center",backgroundColor:colorScheme.grayBlue,minHeight:"100vh",paddingTop:"10vh",paddingBottom: "10vh",  borderRadius:"5em 0px 0px 5em"}}>
           {console.log(this.state.spaceState)}
             <Carousel
-              arrowLeft={this.state.spaceState === 1 ? null :<img name="arrow-left" src={left} />  }
-              arrowRight={this.state.spaceState === 1 ? null : <img name="arrow-right" src={right} /> }
+              arrowLeft={<img name="arrow-left" src={left} />  }
+              arrowRight={ <img name="arrow-right" src={right} /> }
               addArrowClickHandler
               infinite
               clickToChange
