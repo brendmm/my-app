@@ -98,10 +98,9 @@ const projects = [
   },
   {
     title: "Plotscript",
-    description: `Plotscript is a lisp scripting language. The goal of this project
-    in school was to fully show us the tools of object oriented programming. Along
-    the way I was able to learn about GUI implementation, unit testing, multi
-    threading, and more`,
+    description: `Plotscript is a lisp scripting language. This project demonstrates
+    the tools of object oriented programming. It is also a great example of
+    GUI implementation, unit testing, multithreading, and more`,
     topics: [
       "Object Oriented Programming",
       "GUI Design",
