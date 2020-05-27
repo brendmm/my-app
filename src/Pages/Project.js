@@ -168,7 +168,7 @@ class Project extends Component {
 
   createPage=(item,index)=>{
     return(
-      <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, height:"80vh",borderRadius:"15px"}}>
+      <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, minHeight:"80vh",borderRadius:"15px"}}>
       <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
          <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
            {item.title}
@@ -183,7 +183,7 @@ class Project extends Component {
                   <a className="button" href={item.link} target="_blank" style={{border: "0px solid "+colorScheme.offWhite, color: colorScheme.grayBlue, backgroundColor: colorScheme.offWhite}}>
                     More Information on {item.linkDesc}
                   </a>
-                </div>: <div><br/><br/></div>
+                </div>: <br/>
 
             }
 
