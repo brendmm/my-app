@@ -16,7 +16,7 @@ class Resume extends Component {
     <div style={{backgroundColor:colorScheme.offWhite,minHeight:"100vh",paddingTop:"10vh"}}>
       <div className="card column is-6 is-offset-3" style={{backgroundColor:"transparent",bordear:"5px black solid",borderRadius:"25px",marginTop:"15%",boxShadow: "0px 0px 0px"}}>
 
-        <div className = "card column is-11 is-offset-1" style={{backgroundColor:"transparent",paddingTop:"5%",paddingBottom:"5%",boxShadow: "0px 0px 0px",borderRadius:"25px"}}>
+        <div className = "card column is-12 is-offset-1" style={{backgroundColor:"transparent",paddingTop:"5%",paddingBottom:"5%",boxShadow: "0px 0px 0px",borderRadius:"25px"}}>
 
                   <div className="title is-3" style={{textAlign:"center"}}>
                   Questions or Feedback?
