@@ -178,16 +178,15 @@ class Project extends Component {
           <div class="content">
               {item.description}
 
-              <br/>
               {item.hasLink ?
                 <div>
                   <a className="button" href={item.link} target="_blank" style={{border: "0px solid "+colorScheme.offWhite, color: colorScheme.grayBlue, backgroundColor: colorScheme.offWhite}}>
                     More Information on {item.linkDesc}
                   </a>
-                </div>: null
+                </div>: <div><br/><br/></div>
 
             }
-              <br/>
+
               Topics:
               <ul style={{marginLeft:"5%", fontSize:"0.75em"}}>
                 {item.topics.map((name, index) => (
