@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
 
 import "bulma/css/bulma.css";
-import {colorScheme, buttonStyle} from "../design.js"
+import {colorScheme} from "../design.js"
 
 import headshot from '../Images/Headshot.png'
 import software from '../Images/software.png'
 import graduate from '../Images/graduate.png'
 import location from '../Images/location.png'
 import PaneButton from '../Components/PaneButton'
-import {SlideDown} from 'react-slidedown'
-import 'react-slidedown/lib/slidedown.css'
-
-import Image from 'react-image-resizer';
 
 class About extends Component {
   constructor(props) {
@@ -36,7 +32,7 @@ class About extends Component {
               <div className="column is-4" style={{textAlign:"center",color:colorScheme.offWhite,marginTop:"0%"}}>
 
               <div style={{display: "inline-block"}}>
-              <img className="is-rounded"src={headshot} width="100%" alt="Placeholder image" style={{float:"left", paddingTop:"4%"}}/>
+              <img className="is-rounded"src={headshot} width="100%" alt="Placeholder" style={{float:"left", paddingTop:"4%"}}/>
 
               </div>
               </div>

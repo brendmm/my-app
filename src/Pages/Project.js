@@ -8,7 +8,7 @@ import Modal from 'react-responsive-modal';
 import {colorScheme, buttonStyle} from "../design.js"
 import left from '../Images/leftIcon.png'
 import right from '../Images/rightIcon.png'
-import Image from 'react-image-resizer';
+// import Image from 'react-image-resizer';
 
 const projects = [
   {
@@ -27,7 +27,7 @@ const projects = [
     linkDesc: null,
     link: null,
     githubLink: null,
-    modalInfo: <div class="container" style={{marginTop:"3%"}}>
+    modalInfo: <div className="container" style={{marginTop:"3%"}}>
         The objective was for the rover to retrieve  requested object.
         By showing a handwritten word to a camera, They system would
         begin by running an optical character recognition software to
@@ -43,12 +43,12 @@ const projects = [
         explanation and demonstration of the system.
         <br/>
         <br/>
-          <div class="columns">
-            <div class="column">
+          <div className="columns">
+            <div className="column">
             {1 ?
-            <iframe style={{marginLeft:"12%"}} width="560" height="315" src="https://www.youtube.com/embed/FZ6dC4iSaqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+            <iframe title="Demo Video" style={{marginLeft:"12%"}} width="560" height="315" src="https://www.youtube.com/embed/FZ6dC4iSaqo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
               :
-              <a className="button is-link" href="https://www.youtube.com/watch?v=FZ6dC4iSaqo" target="_blank">
+              <a className="button is-link" href="https://www.youtube.com/watch?v=FZ6dC4iSaqo" rel="noopener noreferrer" target="_blank">
                 Go To Video
               </a>
             }
@@ -149,7 +149,6 @@ class Project extends Component {
   // }
 
   handleWindowResize = () => {
-    console.log('here')
     if(window.innerWidth<700){
       this.setState({ spaceState: 1 });
     }
@@ -159,22 +158,12 @@ class Project extends Component {
   }
 
   componentDidMount() {
-    console.log('test')
-
     window.addEventListener('resize', this.handleWindowResize());
   }
 
   componentWillUnmount() {
     window.removeEventListener('resize', this.handleWindowResize());
   }
-  // determineSlides = () => {
-  //   if(this.state.spaceState === 1){
-  //     return 2
-  //   }
-  //   else{
-  //     return 1
-  //   }
-  // }
 
   determineWidth = () => {
     if(this.state.spaceState === 2){
@@ -187,19 +176,19 @@ class Project extends Component {
 
   createPage=(item,index)=>{
     return(
-      <div className="card" style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, minHeight:"80vh",borderRadius:"15px"}}>
-      <div class="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
-         <div class="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
+      <div className="card" key={item.title} style={{width:this.determineWidth(),backgroundColor:colorScheme.offWhite, minHeight:"80vh",borderRadius:"15px"}}>
+      <div className="card-div" style={{backgroundColor:colorScheme.lightBlue}}>
+         <div className="card-div-title" style={{color:"#000000",fontSize:"1.2em"}}>
            {item.title}
          </div>
        </div>
-       <div class="card-content" style={{textAlign:"left",backgroundColor:colorScheme.offWhite}}>
-          <div class="content">
+       <div className="card-content" style={{textAlign:"left",backgroundColor:colorScheme.offWhite}}>
+          <div className="content">
               {item.description}
 
               {item.hasLink ?
                 <div>
-                  <a className="button" href={item.link} target="_blank" style={{border: "0px solid "+colorScheme.offWhite, color: colorScheme.grayBlue, backgroundColor: colorScheme.offWhite}}>
+                  <a className="button" href={item.link} target="_blank" rel="noopener noreferrer" style={{border: "0px solid "+colorScheme.offWhite, color: colorScheme.grayBlue, backgroundColor: colorScheme.offWhite}}>
                     More Information on {item.linkDesc}
                   </a>
                 </div>: <br/>
@@ -216,12 +205,12 @@ class Project extends Component {
               </ul>
               <br/>
               {item.hasModal ?
-              <button class="button is-large is-link " onClick={() => this.onOpenModal(item.title, item.modalInfo)} style={buttonStyle}>
+              <button className="button is-large is-link " onClick={() => this.onOpenModal(item.title, item.modalInfo)} style={buttonStyle}>
                 {item.modalTitle}
               </button>  : null
             }
             {item.hasGithub ?
-              <a className="button is-large is-link " href={item.githubLink} target="_blank" style={buttonStyle}>
+              <a className="button is-large is-link " href={item.githubLink} rel="noopener noreferrer" target="_blank" style={buttonStyle}>
                     View Github Repo
               </a>  : null
           }
@@ -235,10 +224,9 @@ class Project extends Component {
     return (
       <div style={{backgroundColor:colorScheme.offWhite}}>
           <div style={{textAlign:"center",backgroundColor:colorScheme.grayBlue,minHeight:"100vh",paddingTop:"10vh",paddingBottom: "10vh",  borderRadius:"5em 0px 0px 5em"}}>
-          {console.log(this.state.spaceState)}
             <Carousel
-              arrowLeft={<img name="arrow-left" src={left} />  }
-              arrowRight={ <img name="arrow-right" src={right} /> }
+              arrowLeft={<img name="arrow-left" alt='left Arrow' src={left} />  }
+              arrowRight={ <img name="arrow-right" alt='right Arrow' src={right} /> }
               addArrowClickHandler
               infinite
               clickToChange

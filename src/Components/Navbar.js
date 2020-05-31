@@ -32,7 +32,7 @@ class Navbar extends Component {
               Brendan Muldowney
             </div>
           </div>
-          <a onClick={() => this.responsiveNavbar()} role="button"
+          <a onClick={() => this.responsiveNavbar()} role="button" href="#"
              className={"navbar-burger burger" + (this.state.isActive ? "is-active" : "") }
              aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
             <span aria-hidden="true" style={{backgroundColor:"white"}}></span>
@@ -69,11 +69,11 @@ class Navbar extends Component {
           <div className="navbar-end">
             <div className="navbar-item">
               <div className="buttons">
-                <a className="button" href="https://github.com/brendmm" target="_blank" style={buttonStyle}>
-                  <img src={Github} width="30" height="30"/>
+                <a className="button" href="https://github.com/brendmm" target="_blank" rel="noopener noreferrer" style={buttonStyle}>
+                  <img src={Github} alt='placeholder' width="30" height="30"/>
                 </a>
-                <a className="button" href="https://www.linkedin.com/in/brendan-muldowney-892895132/" target="_blank" style={buttonStyle}>
-                  <img src={LinkedIn} width="30" height="30"/>
+                <a className="button" href="https://www.linkedin.com/in/brendan-muldowney-892895132/" target="_blank" rel="noopener noreferrer" style={buttonStyle}>
+                  <img src={LinkedIn} alt='placeholder' width="30" height="30"/>
                 </a>
               </div>
             </div>

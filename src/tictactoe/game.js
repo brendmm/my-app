@@ -201,7 +201,7 @@ class Game extends React.Component{
       ((this.state.topLeftValue === this.state.centerCenterValue) && (this.state.topLeftValue  === this.state.bottomRightValue) && (this.state.topLeftValue !== " ")) ||
       ((this.state.topRightValue === this.state.centerCenterValue) && (this.state.topRightValue === this.state.bottomLeftValue) && (this.state.topRightValue !== " "))
     ){
-      if(this.state.move == 1){
+      if(this.state.move === 1){
         this.setState({game: true, status: "O's Win!"})
       }
       else{

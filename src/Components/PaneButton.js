@@ -1,16 +1,14 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
 // import { Route } from "react-router";
-import headshot from '../Images/Headshot.png'
-import software from '../Images/software.png'
-import graduate from '../Images/graduate.png'
-import location from '../Images/location.png'
-import {colorScheme, buttonStyle} from "../design.js"
+// import headshot from '../Images/Headshot.png'
+// import software from '../Images/software.png'
+// import graduate from '../Images/graduate.png'
+// import location from '../Images/location.png'
+import { buttonStyle} from "../design.js"
 
 import {SlideDown} from 'react-slidedown'
 import 'react-slidedown/lib/slidedown.css'
-
-import Image from 'react-image-resizer';
 
 const paneStyle = { borderRadius:"25px", paddingLeft:"10%", display:"inline-block",minWidth:"100%",paddingBottom:"2%",  color: "black"}
 class PaneButton extends Component {
@@ -45,7 +43,7 @@ descibeData = (info) => {
   render() {
     return (
       <div className="subtitle is-3 is-center" onClick={this.showData} style={{...paneStyle,...buttonStyle}}>
-        <img className="is-rounded"src={this.props.src} width="70" alt="Placeholder image" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
+        <img className="is-rounded"src={this.props.src} width="70" alt="Placeholder" style={{float:"left", paddingTop:"4%", marginRight:"10%"}}/>
         <div style={{marginLeft:"10%", fontSize:"1em"}}>
           {this.props.label}
         </div>

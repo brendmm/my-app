@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import "bulma/css/bulma.css";
 import Phone from '../Images/phone.png'
 import Email from '../Images/email.png'
-import {colorScheme, buttonStyle} from "../design.js"
+import {colorScheme} from "../design.js"
 
 class Resume extends Component {
   constructor(props) {
@@ -29,7 +29,7 @@ class Resume extends Component {
                   <div className="columns">
                   <div className="column is-half">
                   <span className="icon" style={{float:"left"}}>
-                    <img className="is-rounded"src={Phone} alt="Placeholder image"/>
+                    <img className="is-rounded"src={Phone} alt="Placeholder"/>
                   </span>
                   <div className="subtitle is-5" >
                     <div className="title is-5" style={{float:"left", marginRight:"2%",  marginLeft:"2%"}}>
@@ -40,7 +40,7 @@ class Resume extends Component {
                   </div>
                   <div className="column is-two-thirds">
                   <span className="icon" style={{float:"left"}}>
-                    <img className="is-rounded"src={Email} alt="Placeholder image"/>
+                    <img className="is-rounded"src={Email} alt="Placeholder"/>
                   </span>
                   <div className="subtitle is-5" >
                   <div className="title is-5" style={{float:"left", marginRight:"2%",  marginLeft:"2%"}}>
