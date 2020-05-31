@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import "bulma/css/bulma.css";
 import './MainPage.css';
-import {colorScheme} from "./design.js"
 
 import Navbar from './Components/Navbar';
 import About from "./Pages/About";

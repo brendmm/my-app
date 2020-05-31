@@ -134,20 +134,6 @@ class Project extends Component {
     this.setState({ modalState: false});
   };
 
-  // fixSpace = () => {
-  // if(this.props.space!=this.state.spaceState){
-  //   if(this.props.space === 1){
-  //     this.setState({spaceState: this.props.space });
-  //   }
-  //   else if(this.props.space === 2){
-  //     this.setState({spaceState: this.props.space });
-  //   }
-  //   else if(this.props.space === 3){
-  //     this.setState({spaceState: this.props.space });
-  //   }
-  // }
-  // }
-
   handleWindowResize = () => {
     if(window.innerWidth<700){
       this.setState({ spaceState: 1 });
